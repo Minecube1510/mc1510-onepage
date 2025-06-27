@@ -1,2 +1,3 @@
-# mc1510-one-page
-Hanya berisi project web yang merupakan satu halaman
+# Project One-Page
+
+Hanya berisi project web yang merupakan satu halaman.
