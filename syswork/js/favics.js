@@ -1,6 +1,6 @@
 /* favics.js */
 
-const faviconPath = 'https://replit.com/@minekubus84s/Trying-Ujicoba#asset/emoji-test.ico';
+const faviconPath = '../asset/emoji-test.ico';
 const commonAttributes = [
   { rel: 'icon', type: 'image/x-icon', },
   { rel: 'shortcut icon', type: 'image/x-icon', },
