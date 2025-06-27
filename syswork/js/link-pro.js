@@ -3,11 +3,20 @@
 
 /* Linking */
 const alLink = [
-    ('compars-gosei-holoid/cgh-index.html'),  // [Comparation Gosei-HoloID]
-    ('cs/cs-index.html'),  // [ComingSoon]
-    ('cs/cs-index.html'),  // [ComingSoon]
-    ('cs/cs-index.html'),  // [ComingSoon]
-    ('cs/cs-index.html'),  // [ComingSoon]
+    // [Comparation Gosei-HoloID]
+    ('compars-gosei-holoid/cgh-index.html'),
+
+    // [ComingSoon]
+    ('cs/cs-index.html'),
+
+    // [ComingSoon]
+    ('cs/cs-index.html'),
+
+    // [ComingSoon]
+    ('cs/cs-index.html'),
+
+    // [ComingSoon]
+    ('cs/cs-index.html'),
 ]
 /* Linking */
 
@@ -15,3 +24,8 @@ const alLink = [
 /* Sistem */
 
 /* Sistem */
+
+
+/* Uji Coba */
+console.log(alLink);
+/* Uji Coba */
