@@ -63,16 +63,16 @@ export const spkReason = [  // Bahasa Lain
 
 /* Ujicoba */
 export const reasonSet = {
-  id: idnReason,
   en: engReason,
+  id: idnReason,
   // contoh tambahan:
   // jp: jpReason,
   // de: deReason,
 };
 export function getReason(langCode, index) {
   const list = reasonSet[langCode];
-  if (!list) return `⛔ Bahasa '${langCode}' belum tersedia.`;
-  return list[index] || "⁉️ Alasan belum ditulis.";
+  if (!(list)) return (`⛔ Bahasa '${langCode}' belum tersedia.`);
+  return ((list[index]) || ("⁉️ Alasan belum ditulis."));
 }
 //
 //console.log (JesonID);
