@@ -7,7 +7,7 @@
 
 
 /* Sistem */
-const idnReason = [
+const idnReason = [  // Indonesia
   /* Moona Hoshinova */
   ("Karena Moona bertema bulan, dan Bulan itu berada di langit. Berdasarkan lore-nya, dia adalah sang dewi bulan, dewi Hoshinova."),
   /* Pavolia Reine */
@@ -30,7 +30,7 @@ const idnReason = [
   ("Karena Kaela adalah si Blacksmith. Selalu berurusan dengan material batu dan logam."),
 ];
 //
-const engReason = [
+const engReason = [  // English
   /* Moona Hoshinova */
   ("Moona's default theme is the moon, and Moon is at the sky. Her lore is, she’s a moon goddess."),
   /* Pavolia Reine */
@@ -53,7 +53,11 @@ const engReason = [
   ("Kaela is a blacksmith. She constantly works with stones and metals."),
 ];
 // X
-//.
+const spkReason = [  // Bahasa Lain
+  (''),
+  (''),
+  (''),
+];
 /* Sistem */
 
 

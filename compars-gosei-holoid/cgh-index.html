@@ -18,9 +18,12 @@
     //
     let titleIndex = 0;
 
-    document.getElementById('cgh-title').addEventListener('click', () => {
-      titleIndex = (titleIndex + 1) % tl_titling.length;
-      document.getElementById('cgh-title').textContent = tl_titling[titleIndex];
+    window.addEventListener('DOMContentLoaded', () => {
+      const cghTitle = document.getElementById('cgh-title');
+      cghTitle.addEventListener('click', () => {
+        titleIndex = (titleIndex + 1) % tl_titling.length;
+        cghTitle.textContent = tl_titling[titleIndex];
+      });
     });
   </script>
 
