@@ -130,7 +130,7 @@ export const datalent = JesonID
     gambar: item.gambar.map((g, i) => ({
       ...g,
       grup: grupList[i] || "Unknown",
-      reasonIndex: g.reasonIndex ?? i
+      why: g.why ?? i
     }))
   }));
 
