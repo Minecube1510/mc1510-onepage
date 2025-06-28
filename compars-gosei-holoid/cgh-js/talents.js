@@ -97,24 +97,24 @@ const JesonID = [
     label: "Skick",
     gambar: [
       createGambar((1),(1), ('4/41'), (1), (0),(null), ((1)-(1))),  // Moona
-      createGambar((2),(1), ('3/34'), (2), (0),(null), ((1)-(1))),  // Reine
-      createGambar((3),(1), ('2/21'), (2), (0),(null), ((1)-(1))),  // Zeta
+      createGambar((2),(1), ('3/34'), (2), (0),(null), ((1)-(2))),  // Reine
+      createGambar((3),(1), ('2/21'), (2), (0),(null), ((1)-(3))),  // Zeta
     ],
   },
   {
     label: "Seaick",
     gambar: [
-      createGambar((1),(2), ('6/6e'), (2), (0),(4), ((1)-(1))),  // Iofi
-      createGambar((2),(2), ('3/3d'), (2), (0),(null), ((1)-(1))),  // Ollie
-      createGambar((3),(2), ('7/7f'), (1), (0),(null), ((1)-(1))),  // Kobo
+      createGambar((1),(2), ('6/6e'), (2), (0),(4), ((1)-(4))),  // Iofi
+      createGambar((2),(2), ('3/3d'), (2), (0),(null), ((1)-(5))),  // Ollie
+      createGambar((3),(2), ('7/7f'), (1), (0),(null), ((1)-(6))),  // Kobo
     ],
   },
   {
     label: "Landick",
     gambar: [
-      createGambar((1),(3), ('c/c5'), (2), (0),(null), ((1)-(1))),  // Risu
-      createGambar((2),(3), ('3/37'), (1), (0),(null), ((1)-(1))),  // Anya
-      createGambar((3),(3), ('5/5a'), (1), (0),(null), ((1)-(1))),  // Kaela
+      createGambar((1),(3), ('c/c5'), (2), (0),(null), ((1)-(7))),  // Risu
+      createGambar((2),(3), ('3/37'), (1), (0),(null), ((1)-(8))),  // Anya
+      createGambar((3),(3), ('5/5a'), (1), (0),(null), ((1)-(9))),  // Kaela
     ],
   },
 ];
