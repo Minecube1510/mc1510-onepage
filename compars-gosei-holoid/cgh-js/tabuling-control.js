@@ -45,7 +45,7 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   https://static.wikia.nocookie.net/pvz-fusion/images/e/e1/Metal.png
   `);  // Linking gambar tabel sementara
   //
-  const reasonText = getReason(currentLang, reasonIndex);
+  const reasonText = getReason(currentLang, why);
 
   // Backdrop gelap
   const backdrop = document.createElement("div");
@@ -112,7 +112,7 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
         <strong>
           Grup:
         </strong> ${grup}
-      </p><p class="card-text mb-2 user-select-none">
+      </p><p class="text-center card-text mb-2 user-select-none">
         "<i>${reasonText}</i>"
       </p>
 
