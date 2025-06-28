@@ -4,7 +4,7 @@
 /* Linking */
 const alLink = [
   {
-    "label": "",
+    "label": "My Comparation of Gosei Tribe and Holo-ID",
     "url": "compars-gosei-holoid/cgh-index.html"
   },
   {
