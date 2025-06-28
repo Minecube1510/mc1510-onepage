@@ -4,6 +4,8 @@
 /* Impor */
 import { grupList } from './talents.js'
 import { datalent } from './talents.js'
+//
+import { getReason } from './compare-reason.js'
 //import JesonID from './talents.js'
 /* Impor */
 
@@ -32,7 +34,7 @@ function hidingCard() {
   }, 350); // Durasi harus sama dengan durasi animasi CSS
 }
 //
-function showCardPreview({ src, nama, label, bascolor, why, grup, }) {
+function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   // Hapus preview lama
   document.getElementById("card-preview")?.remove();
   document.getElementById("card-backdrop")?.remove();
@@ -42,6 +44,8 @@ function showCardPreview({ src, nama, label, bascolor, why, grup, }) {
   const temporer = (`
   https://static.wikia.nocookie.net/pvz-fusion/images/e/e1/Metal.png
   `);  // Linking gambar tabel sementara
+  //
+  const reasonText = getReason(currentLang, reasonIndex);
 
   // Backdrop gelap
   const backdrop = document.createElement("div");
@@ -109,7 +113,7 @@ function showCardPreview({ src, nama, label, bascolor, why, grup, }) {
           Grup:
         </strong> ${grup}
       </p><p class="card-text mb-2 user-select-none">
-        "<i>${why}</i>"
+        "<i>${reasonText}</i>"
       </p>
 
       <button class="btn btn-sm btn-dark mt-3 w-100">

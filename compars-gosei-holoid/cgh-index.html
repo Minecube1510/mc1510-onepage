@@ -10,7 +10,7 @@
   <link href="cgh-css/inform-talent.css" rel="stylesheet" type="text/css">
 
   <style>
-    #cgh-title {
+    .cgh-titled {
       transition: opacity 0.3s ease;
     }
   </style>
@@ -28,6 +28,7 @@
 
       // Isi awal langsung dalam bentuk tebal
       cghTitle.innerHTML = tl_titling[titleIndex];
+      cghTitle.className = ("cgh-titled");
 
       cghTitle.addEventListener('click', () => {
         titleIndex = (titleIndex + 1) % tl_titling.length;
