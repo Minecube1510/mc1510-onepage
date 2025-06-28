@@ -27,11 +27,12 @@ function hidingCard() {
   card.classList.remove("rising-card-in");
   card.classList.add("rising-card-out");
 
-  // Setelah animasi selesai, hapus elemen
+  // Setelah animasi selesai, hapus elemen dan reset bahasa
   setTimeout(() => {
     card.remove();
     backdrop.remove();
-  }, 350); // Durasi harus sama dengan durasi animasi CSS
+    currentLang = "en"; // Reset ke default English
+  }, 350);
 }
 //
 let currentLang = "en"; // atau "en" untuk default English
