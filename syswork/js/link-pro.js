@@ -30,10 +30,10 @@ const alLink = [
 /* Sistem */
   const container = document.getElementById("container");
 
-  alLink.forEach((link, index) => {
+  alLink.forEach((item, index) => {
     const a = document.createElement("a");
-    a.href = link.url;
-    a.textContent = `Link ${index + 1}`;
+    a.href = item.url;
+    a.textContent = item.label;
     a.style.display = "block";
     a.className = "linker"; // Tambahkan class CSS
 
