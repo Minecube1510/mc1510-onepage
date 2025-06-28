@@ -32,7 +32,7 @@ const alLink = [
 
   alLink.forEach((link, index) => {
     const a = document.createElement("a");
-    a.href = item.url;
+    a.href = link.url;
     a.textContent = `Link ${index + 1}`;
     a.style.display = "block";
     a.className = "linker"; // Tambahkan class CSS
