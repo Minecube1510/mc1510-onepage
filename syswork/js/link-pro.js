@@ -29,15 +29,14 @@ const alLink = [
     a.href = link;
     a.textContent = `Link ${index + 1}`;
     a.style.display = "block";
-    a.addEventListener("click", function (e) {
-      e.preventDefault(); // Biar nggak lompat
-      console.log(`Link ${index + 1} ke ${link} diklik`);
-    });
+    a.target = "_blank"; // Opsional: buka di tab baru
+
+    // Tidak perlu lagi preventDefault atau event listener
     container.appendChild(a);
   });
 /* Sistem */
 
 
 /* Uji Coba */
-console.log(alLink);
+//console.log(alLink);
 /* Uji Coba */
