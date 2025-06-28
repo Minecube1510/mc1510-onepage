@@ -102,7 +102,8 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
     </a>
 
     <div class="card-body p-2">
-      <h2 class="card-title mb-1 text-center user-select-none"><b>
+      <h2 class="card-title mb-1 text-center user-select-none" id="nama-card"
+      style="cursor: pointer;"><b>
         ${nama}
       </b></h2>
       <p class="card-text mt-3 mb-3 user-select-none">
@@ -113,7 +114,7 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
         <strong>
           Grup:
         </strong> ${grup}
-      </p><p class="text-center card-text mb-2 user-select-none">
+      <p class="text-center card-text mb-2 user-select-none reason-text">
         "<i>${reasonText}</i>"
       </p>
 
@@ -126,6 +127,15 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   // Tombolan
   const btn = card.querySelector("button");
   btn.addEventListener("click", hidingCard);
+
+  const namaEl = card.querySelector("#nama-card");
+  const reasonEl = card.querySelector(".reason-text"); // ini kita atur di bawah
+
+  namaEl.addEventListener("click", () => {
+    currentLang = currentLang === "id" ? "en" : "id";
+    const updatedReason = getReason(currentLang, why);
+    reasonEl.innerHTML = `"&nbsp;<i>${updatedReason}</i>"`;
+  });
 
   // Tambahkan ke halaman
   document.body.appendChild(backdrop);

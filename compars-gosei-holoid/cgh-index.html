@@ -28,7 +28,7 @@
 
       // Isi awal langsung dalam bentuk tebal
       cghTitle.innerHTML = tl_titling[titleIndex];
-      cghTitle.className = ("cgh-titled");
+      cghTitle.classList.add("cgh-titled", "text-center");
 
       cghTitle.addEventListener('click', () => {
         titleIndex = (titleIndex + 1) % tl_titling.length;
