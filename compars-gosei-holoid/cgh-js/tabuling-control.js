@@ -114,7 +114,7 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
         <strong>
           Grup:
         </strong> ${grup}
-      <p class="text-center card-text mb-2 user-select-none reason-text">
+      <p class="card-text mb-2 user-select-none reason-text">
         "<i>${reasonText}</i>"
       </p>
 
