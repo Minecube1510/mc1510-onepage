@@ -18,7 +18,7 @@ export const idnReason = [  // Indonesia
   /* Airani Iofifteen */
   "Karena ada satu kostum Iofi yang berkaitan dengan air, yakni dia punya kostum putri duyung.",
   /* Kureiji Ollie */
-  "Sebenernya untuk si Ollie, udah gak ada pilihan lain (dipaksakan) dan gak tau pula alasan jelas logic-nya. Tapi karena darah adalah memiliki air, bahkan darah berkaitan dengan kematian, maka pada akhirnya, Ollie pun diklasifikasikan begini.",
+  "Ollie diklasifikasikan gini karena udah gak ada pilihan lain lagi. Maka begini aja, darah itu mengandung air, dan berkaitan dengan kematian, ya gitulah.",
   /* Kobo Kanaeru */
   "Karena Kobo adalah sang shaman hujan, udah pasti berurusan dengan air.",
 
@@ -41,7 +41,7 @@ export const engReason = [  // English
   /* Airani Iofifteen */
   "One of Iofi’s costumes is related to water—she has a mermaid outfit.",
   /* Kureiji Ollie */
-  "For Ollie, didn’t known really how to categorizing her. But, maybe blood is contains water, and is tied to death, she ended up in this one.",
+  "Ollie is classified like this because there is no other choice. So it's like this, blood contains water, and is related to death, that's it.",
   /* Kobo Kanaeru */
   "Because Kobo is the Rain Shaman—of course she’s connected to water.",
 
