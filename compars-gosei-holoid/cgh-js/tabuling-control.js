@@ -16,6 +16,7 @@ import { getReason } from './compare-reason.js'
 
 
 /* Sistem */
+let currentLang = "en"; // atau "en" untuk default English
 //
 function hidingCard() {
   const card = document.getElementById("card-preview");
@@ -35,7 +36,6 @@ function hidingCard() {
   }, 350);
 }
 //
-let currentLang = "en"; // atau "en" untuk default English
 function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   // Hapus preview lama
   document.getElementById("card-preview")?.remove();
