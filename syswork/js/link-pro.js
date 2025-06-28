@@ -30,12 +30,14 @@ const alLink = [
 /* Sistem */
   const container = document.getElementById("container");
 
-  alLink.forEach((item, index) => {
+  alLink.forEach((link, index) => {
     const a = document.createElement("a");
     a.href = item.url;
-    a.textContent = item.label || `Link ${index + 1}`;
-    a.className = "linker";  // Tambahkan class CSS
-    a.target = "_blank";  // Opsional: buka di tab baru
+    a.textContent = `Link ${index + 1}`;
+    a.style.display = "block";
+    a.className = "linker"; // Tambahkan class CSS
+
+    // Tidak perlu lagi preventDefault atau event listener
     container.appendChild(a);
   });
 /* Sistem */
