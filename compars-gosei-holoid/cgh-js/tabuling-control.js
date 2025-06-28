@@ -34,7 +34,7 @@ function hidingCard() {
   }, 350); // Durasi harus sama dengan durasi animasi CSS
 }
 //
-let currentLang = "id"; // atau "en" untuk default English
+let currentLang = "en"; // atau "en" untuk default English
 function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   // Hapus preview lama
   document.getElementById("card-preview")?.remove();
@@ -132,7 +132,7 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   const reasonEl = card.querySelector(".reason-text"); // ini kita atur di bawah
 
   namaEl.addEventListener("click", () => {
-    currentLang = currentLang === ("en") ? ("id") : ("en");
+    currentLang = currentLang === ("id") ? ("en") : ("id");
     const updatedReason = getReason(currentLang, why);
     reasonEl.innerHTML = (`"<i>${updatedReason}</i>"`);
   });
