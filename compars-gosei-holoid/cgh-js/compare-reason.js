@@ -18,7 +18,7 @@ export const idnReason = [  // Indonesia
   /* Airani Iofifteen */
   ("Karena ada satu kostum Iofi yang berkaitan dengan air, yakni dia punya kostum putri duyung."),
   /* Kureiji Ollie */
-  ("Sebenernya Ollie gak punya pilihan lain. Tapi karena darah adalah memiliki air, bahkan darah berkaitan dengan kematian, maka pada akhirnya, Ollie pun diklasifikasikan begini."),
+  ("Sebenernya untuk si Ollie, udah gak ada pilihan lain (dipaksakan) dan gak tau pula alasan jelas logic-nya. Tapi karena darah adalah memiliki air, bahkan darah berkaitan dengan kematian, maka pada akhirnya, Ollie pun diklasifikasikan begini."),
   /* Kobo Kanaeru */
   ("Karena Kobo adalah sang shaman hujan, udah pasti berurusan dengan air."),
 
