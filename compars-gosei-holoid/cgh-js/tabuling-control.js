@@ -211,7 +211,7 @@ function renderTableBody(tbodyElement, dataList) {
     tdLabel.appendChild(labelSpan);
     row.appendChild(tdLabel);
 
-    item.gambar.forEach(({ src, trimchar, bascolor, nama, why, grup }) => {
+    item.gambar.forEach(({ src, trimchar, bascolor, nama, grup, why, }) => {
       const td = document.createElement("td");
       td.className = "text-center align-middle";
 
@@ -234,7 +234,7 @@ function renderTableBody(tbodyElement, dataList) {
 
       img.id = `tombol-${trimchar.toLowerCase().replace(/\s+/g, "")}`;
       img.addEventListener("click", () => {
-        showCardPreview({ src, nama, label: item.label, bascolor, why, grup });
+        showCardPreview({ src, nama, label: item.label, bascolor, grup, why, });
       });
 
       span.appendChild(img);
