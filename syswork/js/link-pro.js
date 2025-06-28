@@ -29,7 +29,7 @@ const alLink = [
     a.href = link;
     a.textContent = `Link ${index + 1}`;
     a.style.display = "block";
-    a.target = "_blank"; // Opsional: buka di tab baru
+    //a.target = "_blank";  // Opsional: buka di tab baru
 
     // Tidak perlu lagi preventDefault atau event listener
     container.appendChild(a);
