@@ -65,7 +65,6 @@ export const spkReason = [  // Bahasa Lain
 export const reasonSet = {
   en: engReason,
   id: idnReason,
-  // contoh tambahan:
   // jp: jpReason,
   // de: deReason,
 };
