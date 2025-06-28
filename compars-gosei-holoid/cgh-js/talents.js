@@ -129,7 +129,7 @@ export const datalent = JesonID
     mark: getMark(item.label),
     gambar: item.gambar.map((g, i) => ({
       ...g,
-      grup: grupList[i] || "Unknown"
+      grup: grupList[i] || "Unknown",
       reasonIndex: g.reasonIndex ?? i
     }))
   }));
