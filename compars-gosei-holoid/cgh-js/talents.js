@@ -96,34 +96,25 @@ const JesonID = [
   {
     label: "Skick",
     gambar: [
-      createGambar((1),(1), ('4/41'), (1), (0),(null),  // Moona
-      ("Karena dia alami bertema bulan. Bulan itu kan di langit! Dan dia juga lore-nya adalah dewi bulan!"),),
-      createGambar((2),(1), ('3/34'), (2), (0),(null),  // Reine
-      ("Karena Reine adalah putri burung merak, dari kerajaan merak. Sihirnya pun angin."),),
-      createGambar((3),(1), ('2/21'), (2), (0),(null),  // Zeta
-      ("Karena Zeta adalah agent yang punya pistol. Pistol ada kaitannya dengan angin."),),
+      createGambar((1),(1), ('4/41'), (1), (0),(null)),  // Moona
+      createGambar((2),(1), ('3/34'), (2), (0),(null)),  // Reine
+      createGambar((3),(1), ('2/21'), (2), (0),(null)),  // Zeta
     ],
   },
   {
     label: "Seaick",
     gambar: [
-      createGambar((1),(2), ('6/6e'), (2), (0),(4),  // Iofi
-      ("Karena ada satu kostum Iofi yang berkaitan dengan air, yakni dia punya kostum putri duyung."),),
-      createGambar((2),(2), ('3/3d'), (2), (0),(null),  // Ollie
-      ("Sebenernya Ollie gak punya pilihan lain. Tapi karena darah adalah memiliki air, bahkan darah berkaitan dengan kematian, maka pada akhirnya, Ollie pun diklasifikasikan begini."),),
-      createGambar((3),(2), ('7/7f'), (1), (0),(null),  // Kobo
-      ("Karena Kobo adalah sang shaman hujan, udah pasti berurusan dengan air."),),
+      createGambar((1),(2), ('6/6e'), (2), (0),(4)),  // Iofi
+      createGambar((2),(2), ('3/3d'), (2), (0),(null)),  // Ollie
+      createGambar((3),(2), ('7/7f'), (1), (0),(null)),  // Kobo
     ],
   },
   {
     label: "Landick",
     gambar: [
-      createGambar((1),(3), ('c/c5'), (2), (0),(null),  // Risu
-      ("Karena Risu adalah tupai. Dia bahkan tinggalnya di tempat alam yang dinamakan sebagai 'hutan ajaib', itu tuh rumahnya."),),
-      createGambar((2),(3), ('3/37'), (1), (0),(null),  // Anya
-      ("Karena Anya adalah senjata Keris, yakni belati Asia Tenggara. Maka dia dibuat dari kayu dan logam."),),
-      createGambar((3),(3), ('5/5a'), (1), (0),(null),  // Kaela
-      ("Karena Kaela adalah si Blacksmith. Selalu berurusan dengan material batu dan logam."),),
+      createGambar((1),(3), ('c/c5'), (2), (0),(null)),  // Risu
+      createGambar((2),(3), ('3/37'), (1), (0),(null)),  // Anya
+      createGambar((3),(3), ('5/5a'), (1), (0),(null)),  // Kaela
     ],
   },
 ];
