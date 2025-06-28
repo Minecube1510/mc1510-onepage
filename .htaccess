@@ -1,2 +1,16 @@
 # HTACCESS
 
+# Aktifkan URL rewriting
+RewriteEngine On
+
+# Hilangkan ekstensi .html
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Hilangkan ekstensi .css
+RewriteCond %{REQUEST_FILENAME}\.css -f
+RewriteRule ^([^/]+)$ $1.css [L]
+
+# Hilangkan ekstensi .js
+RewriteCond %{REQUEST_FILENAME}\.js -f
+RewriteRule ^([^/]+)$ $1.js [L]
