@@ -34,6 +34,7 @@ function hidingCard() {
   }, 350); // Durasi harus sama dengan durasi animasi CSS
 }
 //
+let currentLang = "id"; // atau "en" untuk default English
 function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   // Hapus preview lama
   document.getElementById("card-preview")?.remove();
