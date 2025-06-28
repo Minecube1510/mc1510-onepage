@@ -41,7 +41,7 @@ export const engReason = [  // English
   /* Airani Iofifteen */
   ("One of Iofi’s costumes is related to water—she has a mermaid outfit."),
   /* Kureiji Ollie */
-  ("Ollie didn’t really have another category. But since blood contains water and is tied to death, she ended up in this one."),
+  ("For Ollie, didn’t known really how to categorizing her. But, maybe blood is contains water, and is tied to death, she ended up in this one."),
   /* Kobo Kanaeru */
   ("Because Kobo is the Rain Shaman—of course she’s connected to water."),
 
