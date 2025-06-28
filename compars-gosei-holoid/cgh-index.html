@@ -15,6 +15,17 @@
     .cgh-titled {
       transition: opacity 0.3s ease;
     }
+
+    .cgh-backlink {
+      text-decoration: none;
+      color: #0d6efd;  /* Bootstrap primary */
+      transition: all 0.2s ease-in-out;
+    }
+    .cgh-backlink:hover,
+    .cgh-backlink:active {
+      color: #6610f2;  /* Ganti warna saat hover/active */
+      text-decoration: underline;  /* Atau tetap none kalau gak mau underline */
+    }
   </style>
 
   <script type="module" src="../syswork/js/favics.js"></script>
@@ -57,7 +68,7 @@
     <script type="module" src="cgh-js/tabuling-control.js"></script>
     <script type="module" src="cgh-js/compare-reason.js"></script>
 
-    <a class="text-primary text-center mb-5"
+    <a class="cgh-backlink text-primary text-center mb-5"
     href="../">
       Back Home
     </a>
