@@ -132,9 +132,9 @@ function showCardPreview({ src, nama, label, bascolor, grup, why, }) {
   const reasonEl = card.querySelector(".reason-text"); // ini kita atur di bawah
 
   namaEl.addEventListener("click", () => {
-    currentLang = currentLang === "id" ? "en" : "id";
+    currentLang = currentLang === ("id") ? ("en") : ("id");
     const updatedReason = getReason(currentLang, why);
-    reasonEl.innerHTML = `"&nbsp;<i>${updatedReason}</i>"`;
+    reasonEl.innerHTML = (`"<i>${updatedReason}</i>"`);
   });
 
   // Tambahkan ke halaman
