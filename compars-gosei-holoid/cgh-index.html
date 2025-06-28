@@ -10,6 +10,19 @@
   <link href="cgh-css/inform-talent.css" rel="stylesheet" type="text/css">
 
   <script type="module" src="../syswork/js/favics.js"></script>
+  <script>
+    const tl_titling = [
+      ('Komparasi-ku terhadap Gosei Tribe dengan Holo ID'),  // Indonesia
+      ('My comparison of Gosei Tribes with Holo ID'),  // English
+    ]
+    //
+    let titleIndex = 0;
+
+    document.getElementById('cgh-title').addEventListener('click', () => {
+      titleIndex = (titleIndex + 1) % tl_titling.length;
+      document.getElementById('cgh-title').textContent = tl_titling[titleIndex];
+    });
+  </script>
 
 </head>
 
@@ -17,8 +30,8 @@
   <script type="module" src="../syswork/js/bootstraper.js"></script>
 
   <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
-    <h1 class="text-primary text-center mt-5 mb-4"><b>
-      Hanya nyoba-nyoba
+    <h1 id="cgh-title" class="text-primary text-center mt-5 mb-4"><b>
+      Text
     </b></h1>
 
     <table class="table table-striped table-bordered table-hover border-2 border-dark">
@@ -29,7 +42,7 @@
     <script type="module" src="cgh-js/tabuling-control.js"></script>
     <script type="module" src="cgh-js/compare-reason.js"></script>
 
-    <p class="text-primary text-center mb-5">.</p>
+    <!-- p class="text-primary text-center mb-5">.</p -->
   </div>
 </body>
 
