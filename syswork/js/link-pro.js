@@ -8,8 +8,8 @@ const alLink = [
     "url": "compars-gosei-holoid/cgh-index.html"
   },
   {
-    "label": "Coming Soon",
-    "url": "cs/cs-index.html"
+    "label": "Moekyu Phone Cells",
+    "url": "moekyu-phonecell-project/mpp-index.html"
   },
   {
     "label": "Coming Soon",
