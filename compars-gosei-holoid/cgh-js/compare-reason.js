@@ -27,30 +27,30 @@ export const idnReason = [  // Indonesia
   /* Anya Melfissa */
   "Karena Anya adalah senjata Keris, yakni belati Asia Tenggara. Maka dia dibuat dari kayu dan logam.",
   /* Kaela Kovalskia */
-  "Karena Kaela adalah si Blacksmith. Selalu berurusan dengan material batu dan logam.",
+  "Karena Kaela adalah si Pandai Besi (YANG IMUT). Selalu berurusan dengan material batu dan logam.",
 ];
 //
 export const engReason = [  // English
   /* Moona Hoshinova */
-  "Moona's default theme is the moon, and Moon is at the sky. Her lore is, she’s a moon goddess.",
+  "Moona's default theme is the Moon, and Moon is at the sky. Her lore is, she’s a moon goddess.",
   /* Pavolia Reine */
-  "Reine is a peacock princess from the Peacock Kingdom. Even her magic is 'wind'.",
+  "Reine is a Peacock Princess from the Peacock Kingdom. Even her magic is 'wind'.",
   /* Vestia Zeta */
-  "Zeta is a secret agent, of course she's using a pistol. The pistols are related to air and wind.",
+  "Zeta is a (Cat) Secret Agent, of course she's using a pistol. The pistols are related to air and wind.",
 
   /* Airani Iofifteen */
-  "One of Iofi’s costumes is related to water—she has a mermaid outfit.",
+  "One of Iofi’s costumes is related to water, that she has a mermaid outfit.",
   /* Kureiji Ollie */
   "Ollie is classified like this because there is no other choice. So it's like this, blood contains water, and is related to death, that's it.",
   /* Kobo Kanaeru */
-  "Because Kobo is the Rain Shaman—of course she’s connected to water.",
+  "Kobo is the Rain Shaman. of course she’s connected to water element.",
 
   /* Ayunda Risu */
-  "Risu is a squirrel, that she lives in a magical forest, her home too.",
+  "Risu is a Magical Squirrel (she can be the Human), that she lives in a magical forest, her home too.",
   /* Anya Melfissa */
-  "Anya is a Kris, a Southeast Asian dagger. So she’s made from wood (for stuff) and metal (for blade).",
+  "Anya is a Kris Weapon, a Southeast Asian dagger. So she’s made from wood (for stuff) and metal (for blade).",
   /* Kaela Kovalskia */
-  "Kaela is a blacksmith. She constantly works with stones and metals.",
+  "Kaela is a (CUTE) Blacksmith. She constantly works with stones and metals.",
 ];
 // X
 export const spkReason = [  // Bahasa Lain
