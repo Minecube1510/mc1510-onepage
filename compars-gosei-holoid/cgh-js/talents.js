@@ -2,13 +2,13 @@
 
 export const chartal = [
   ('Moona Hoshinova'), ('Pavolia Reine'), ('Vestia Zeta'),  // [Skick]
-  ('Airani Iofifteen'), ('Kureiji Ollie'), ('Kobo Kanaeru'),  // [Seaick]]
+  ('Airani Iofifteen'), ('Kureiji Ollie'), ('Kobo Kanaeru'),  // [Seaick]
   ('Ayunda Risu'), ('Anya Melfissa'), ('Kaela Kovalskia'),  // [Landick]
 ];
 const grupID = [
-  ('Area15'),
-  ('Holoro'),
-  ('Holoh3ro')
+  ('Area15'),  // [Gen-1]
+  ('Holoro'),  // [Gen-2]
+  ('Holoh3ro'),  // [Gen-3]
 ]
 //
 function seleChar(a, b) {
