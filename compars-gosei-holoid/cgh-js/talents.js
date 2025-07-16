@@ -18,12 +18,13 @@ function seleChar(a, b) {
   return (selechar);
 }
 
-/* - */
-/* "https://static.wikia.nocookie.net/pvz-fusion/images/e/e7/CherrizillaGallery1.png" */
-/* "https://static.wikia.nocookie.net/virtualyoutuber/images/.png" */
-//
-/* "https://static.wikia.nocookie.net/virtualyoutuber/images" */
-/* "https://static.wikia.nocookie.net/powerrangers/images/3/3a" */
+/*
+"https://static.wikia.nocookie.net/pvz-fusion/images/e/e7/CherrizillaGallery1.png"
+"https://static.wikia.nocookie.net/virtualyoutuber/images/.png"
+
+"https://static.wikia.nocookie.net/virtualyoutuber/images"
+"https://static.wikia.nocookie.net/powerrangers/images/3/3a"
+*/
 //
 const linkLiveImg = (
   "https://static.wikia.nocookie.net/virtualyoutuber/images"
