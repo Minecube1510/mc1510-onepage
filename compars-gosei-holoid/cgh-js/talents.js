@@ -1,14 +1,30 @@
 /* talents.js */
 
 export const chartal = [
-  ('Moona Hoshinova'), ('Pavolia Reine'), ('Vestia Zeta'),  // [Skick]
-  ('Airani Iofifteen'), ('Kureiji Ollie'), ('Kobo Kanaeru'),  // [Seaick]
-  ('Ayunda Risu'), ('Anya Melfissa'), ('Kaela Kovalskia'),  // [Landick]
+  // [Skick] //
+  ('Moona Hoshinova'), ('Pavolia Reine'), ('Vestia Zeta'),
+  // [Skick] //
+  //
+  // [Seaick] //
+  ('Airani Iofifteen'), ('Kureiji Ollie'), ('Kobo Kanaeru'),
+  // [Seaick] //
+  //
+  // [Landick] //
+  ('Ayunda Risu'), ('Anya Melfissa'), ('Kaela Kovalskia'),
+  // [Landick] //
 ];
 const grupID = [
-  ('Area15'),  // [Gen-1]
-  ('Holoro'),  // [Gen-2]
-  ('Holoh3ro'),  // [Gen-3]
+  // [Gen-1] //
+  ('Area15'),
+  // [Gen-1] //
+  //
+  // [Gen-2] //
+  ('Holoro'),
+  // [Gen-2] //
+  //
+  // [Gen-3] //
+  ('Holoh3ro'),
+  // [Gen-3] //
 ]
 //
 function seleChar(a, b) {
@@ -18,18 +34,18 @@ function seleChar(a, b) {
   return (selechar);
 }
 
+/* Linker */
 /*
-"https://static.wikia.nocookie.net/pvz-fusion/images/e/e7/CherrizillaGallery1.png"
-"https://static.wikia.nocookie.net/virtualyoutuber/images/.png"
+  "https://static.wikia.nocookie.net/pvz-fusion/images/e/e7/CherrizillaGallery1.png"
+  "https://static.wikia.nocookie.net/virtualyoutuber/images/.png"
 
-"https://static.wikia.nocookie.net/virtualyoutuber/images"
-"https://static.wikia.nocookie.net/powerrangers/images/3/3a"
+  "https://static.wikia.nocookie.net/virtualyoutuber/images"
+  "https://static.wikia.nocookie.net/powerrangers/images/3/3a"
 */
-//
 const linkLiveImg = (
   "https://static.wikia.nocookie.net/virtualyoutuber/images"
 );
-/* - */
+/* Linker */
 
 function linConnect(name, middle = "") {
   const namer = name.replace(/\s+/g, "_");
