@@ -9,6 +9,7 @@
 /* Imports */
 import * as jsVars from "./imports/variables.js";
 import * as jsFuncs from "./imports/functings.js";
+import { jsProper } from "./imports/functings.js";
 //* * *//
 //
 
@@ -45,8 +46,10 @@ const pathFavic_Png = jsFuncs.linkPathering([
 
 /* Title */
 const pageTitle = ((document).title);
-const baseTitle = jsFuncs.jsGetId("index-title");
-const webTitle = jsFuncs.jsProper("OnePage Project");
+const baseTitle = (jsFuncs.jsGetId("index-title"));
+const webTitle = (jsFuncs.textSentancer([
+    ("OnePage"), jsProper("Project"),
+]));
 //
 baseTitle.textContent = ([
     webTitle, pageTitle

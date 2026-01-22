@@ -1,0 +1,20 @@
+/*
+ *
+ * Name: "tailwind.input.css"
+ * Link: "syswork/styles/imports/tailwind.input.css"
+ *
+ */
+
+/* Setup Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/**/
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+
+/* * */

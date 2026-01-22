@@ -50,13 +50,19 @@ export function jsProper(string) {
 
 
 /* In Mades */
+// Jointers //
+export function textSentancer(arrays) {
+    return arrays
+        .map((item) => (item))
+        .join(jsVars.jsVar_Space);
+}
 // Linkers //
 export function linkPathering(arrays) {
     return arrays
         .map((item) => (jsLower(item)))
         .join(jsVars.jsVar_Dash);
 }
-
+//
 export function linkPath_Begin(arrays) {
     return ((jsVars.jsVar_Dash) +
         (linkPathering(arrays))

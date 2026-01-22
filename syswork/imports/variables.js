@@ -9,6 +9,7 @@
 
 /* Characetr Variables */
 export const jsVar_Blank = ("");
+export const jsVar_Space = (" ");
 //
 export const jsVar_Dash = ("/");
 //
