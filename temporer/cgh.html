@@ -1,92 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title id="onepage-title">Gosei Tribe - Holo ID</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title id="onepage-title">
-    Gosei Tribe - Holo ID
-  </title>
+    <link href="cgh-css/coder-talent.css" rel="stylesheet" type="text/css">
+    <link href="cgh-css/inform-talent.css" rel="stylesheet" type="text/css">
 
-  <link href="cgh-css/coder-talent.css" rel="stylesheet" type="text/css">
-  <link href="cgh-css/inform-talent.css" rel="stylesheet" type="text/css">
+    <style>
+      .cgh-titled {
+        transition: opacity 0.3s ease;
+      }
 
-  <style>
-    .cgh-titled {
-      transition: opacity 0.3s ease;
-    }
+      .cgh-backlink {
+        text-decoration: none;
+        color: #0d6efd !important; /* Bootstrap primary */
+        transition: all 0.2s ease-in-out;
+      }
+      .cgh-backlink:hover {
+        text-decoration: none;
+        /* Yang terjadi saat hover */
+        color: #3b3b3b !important;
+        transform: scale(1.5);
+        /* Yang terjadi saat hover */
+      }
+      .cgh-backlink:active {
+        text-decoration: none;
+        /* Yang terjadi saat active */
+        color: #7e7e7e !important;
+        transform: scale(1.3);
+        /* Yang terjadi saat hover */
+      }
 
-    .cgh-backlink {
-      text-decoration: none;
-      color: #0d6efd !important;  /* Bootstrap primary */
-      transition: all 0.2s ease-in-out;
-    }
-    .cgh-backlink:hover {
-      text-decoration: none;
-      /* Yang terjadi saat hover */
-      color: #3b3b3b !important;
-      transform: scale(1.5);
-      /* Yang terjadi saat hover */
-    }
-    .cgh-backlink:active {
-      text-decoration: none;
-      /* Yang terjadi saat active */
-      color: #7e7e7e !important;
-      transform: scale(1.3);
-      /* Yang terjadi saat hover */
-    }
+      .cgh-stucker {
+        cursor: pointer;
+        /* user-select: none; */
+      }
+    </style>
 
-    .cgh-stucker {
-      cursor: pointer; user-select: none;
-    }
-  </style>
+    <script type="module" src="../syswork/js/favics.js"></script>
+    <script type="module" src="../syswork/js/titling.js"></script>
+    <script>
+      const tl_titling = [
+        "<b>My comparison of Gosei Tribes with Holo ID</b>", // English
+        "<b>Komparasi-ku pada Gosei Tribe dengan Holo ID</b>", // Indonesia
+      ];
+      let titleIndex = 0;
 
-  <script type="module" src="../syswork/js/favics.js"></script>
-  <script type="module" src="../syswork/js/titling.js"></script>
-  <script>
-    const tl_titling = [
-      '<b>My comparison of Gosei Tribes with Holo ID</b>',  // English
-      '<b>Komparasi-ku pada Gosei Tribe dengan Holo ID</b>'  // Indonesia
-    ];
-    let titleIndex = 0;
+      window.addEventListener("DOMContentLoaded", () => {
+        const cghTitle = document.getElementById("cgh-title");
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const cghTitle = document.getElementById('cgh-title');
-
-      // Isi awal langsung dalam bentuk tebal
-      cghTitle.innerHTML = tl_titling[titleIndex];
-      cghTitle.classList.add("cgh-titled", "text-center");
-
-      cghTitle.addEventListener('click', () => {
-        titleIndex = (titleIndex + 1) % tl_titling.length;
+        // Isi awal langsung dalam bentuk tebal
         cghTitle.innerHTML = tl_titling[titleIndex];
+        cghTitle.classList.add("cgh-titled", "text-center");
+
+        cghTitle.addEventListener("click", () => {
+          titleIndex = (titleIndex + 1) % tl_titling.length;
+          cghTitle.innerHTML = tl_titling[titleIndex];
+        });
       });
-    });
-  </script>
+    </script>
+  </head>
 
-</head>
+  <body>
+    <script type="module" src="../syswork/js/bootstraper.js"></script>
 
-<body>
-  <script type="module" src="../syswork/js/bootstraper.js"></script>
+    <div
+      class="container mb-5 d-flex flex-column justify-content-center align-items-center min-vh-100"
+    >
+      <h1 id="cgh-title" class="text-primary text-center mt-5 mb-4 cgh-stucker">
+        &nbsp;
+      </h1>
 
-  <div class="container mb-5 d-flex flex-column justify-content-center align-items-center min-vh-100">
-    <h1 id="cgh-title" class="text-primary text-center mt-5 mb-4 cgh-stucker">
-      &nbsp;
-    </h1>
+      <table
+        class="table table-striped table-bordered table-hover border-2 border-dark"
+      >
+        <thead id="init-tabel" class="table-dark"></thead>
+        <tbody id="isi-tabel"></tbody>
+      </table>
 
-    <table class="table table-striped table-bordered table-hover border-2 border-dark">
-      <thead id="init-tabel" class="table-dark"></thead>
-      <tbody id="isi-tabel"></tbody>
-    </table>
+      <script type="module" src="cgh-js/tabuling-control.js"></script>
+      <script type="module" src="cgh-js/compare-reason.js"></script>
 
-    <script type="module" src="cgh-js/tabuling-control.js"></script>
-    <script type="module" src="cgh-js/compare-reason.js"></script>
-
-    <a class="cgh-backlink text-primary text-center mb-5"
-    href="../"><b>
-      Back Home
-    </b></a>
-  </div>
-</body>
-
+      <a class="cgh-backlink text-primary text-center mb-5" href="../"
+        ><b> Back Home </b></a
+      >
+    </div>
+  </body>
 </html>
