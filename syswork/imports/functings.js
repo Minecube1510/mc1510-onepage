@@ -7,7 +7,8 @@
 //* * *//
 
 /* Imports */
-import * as jsVars from "./variables.js";
+import * as jsVars
+    from "./variables.js";
 //* * *//
 //
 
@@ -54,17 +55,17 @@ export function jsProper(string) {
 export function textSentancer(arrays) {
     return arrays
         .map((item) => (item))
-        .join(jsVars.jsVar_Space);
+        .join(jsVars.varOne.Space);
 }
 // Linkers //
 export function linkPathering(arrays) {
     return arrays
         .map((item) => (jsLower(item)))
-        .join(jsVars.jsVar_Dash);
+        .join(jsVars.varOne.Dash);
 }
 //
 export function linkPath_Begin(arrays) {
-    return ((jsVars.jsVar_Dash) +
+    return ((jsVars.varOne.Dash) +
         (linkPathering(arrays))
     );
 }
@@ -79,4 +80,4 @@ export function linkPath_Begin(arrays) {
 //
 
 
-//
+// !-! //

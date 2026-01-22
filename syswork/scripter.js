@@ -7,40 +7,13 @@
 //* * *//
 
 /* Imports */
-import * as jsVars from "./imports/variables.js";
-import * as jsFuncs from "./imports/functings.js";
-import { jsProper } from "./imports/functings.js";
+import * as jsVars
+    from "./imports/variables.js";
+import * as jsFuncs
+    from "./imports/functings.js";
 //* * *//
-//
-
-
-/* Identic */
-// Link Types
-const linkType_Icon = jsFuncs.jsLower("icon");
-const linkType_ImageXIcon = jsFuncs.jsLower("image/x-icon");
-const linkType_ImagePng = jsFuncs.jsLower("image/png");
-//* * *//
-// GitHub Info
-const github_User = jsFuncs.jsProper("Minecube1510");
-const github_Repo = jsFuncs.jsLower("mc1510-onepage");
-const github_Assets = jsFuncs.jsProper("Minecube1510");
-//
-const pathing_Assets = jsFuncs.linkPathering([
-    ("syswork"), ("assets"),
-    ("favics"),
-]);
-const pathFavicer = jsFuncs.linkPathering([
-    //(github_Repo),
-    (pathing_Assets),
-]);
-//
-const pathFavic_Ico = jsFuncs.linkPathering([
-    (pathFavicer), ("emoji-test.ico"),
-]);
-const pathFavic_Png = jsFuncs.linkPathering([
-    (pathFavicer), ("emoji-test.png"),
-]);
-//* * *//
+import * as jsIdentic
+    from "./imports/identity.js";
 //
 
 
@@ -48,7 +21,8 @@ const pathFavic_Png = jsFuncs.linkPathering([
 const pageTitle = ((document).title);
 const baseTitle = (jsFuncs.jsGetId("index-title"));
 const webTitle = (jsFuncs.textSentancer([
-    ("OnePage"), jsProper("Project"),
+    ("OnePage"),
+    jsFuncs.jsProper("Project"),
 ]));
 //
 baseTitle.textContent = ([
@@ -57,28 +31,37 @@ baseTitle.textContent = ([
 
 
 /* Favicon */
-const commonAttributes = [
-    { rel: linkType_Icon, type: linkType_ImageXIcon },
-    { rel: "shortcut icon", type: linkType_ImageXIcon },
-    { rel: "apple-touch-icon", type: linkType_ImageXIcon },
-    { rel: "apple-touch-icon-precomposed", type: linkType_ImageXIcon },
-    { rel: "apple-touch-icon", type: linkType_ImageXIcon, sizes: "160x160" },
-    { rel: linkType_Icon, type: linkType_ImageXIcon }
+// daftar rel yang mau dipakai
+const rawRels = [
+    (jsIdentic.e_LinkTypes.icon),
+    ("shortcut icon"),
+    ("apple-touch-icon"),
+    ("apple-touch-icon-precomposed"),
+    ("apple-touch-icon"),
+    (jsIdentic.e_LinkTypes.icon),
 ];
+const commonAttributes = ((rawRels).map((rel) => ({
+    rel: jsFuncs.jsLower(rel),
+    type: jsIdentic.e_LinkTypes.imageXIcon,
+    sizes: jsFuncs.jsLower("160x160"),
+})));
+
 //
 commonAttributes.forEach((attrs) => {
-    const link = ((document).createElement("link"));
-    const isPng = ((attrs.type) === (linkType_ImagePng));
-    link.href = ((isPng)
-        ? (pathFavic_Png)
-        : (pathFavic_Ico)
+    const eLink = ((document).createElement("link"));
+    const isPng = (
+        (attrs.type) === ((jsIdentic).e_LinkTypes.imagePng)
+    );
+    eLink.href = ((isPng)
+        ? (jsIdentic.pathFavics.png)
+        : (jsIdentic.pathFavics.ico)
     );
     //
     Object.entries(attrs).forEach(([key, val]) => {
-        link.setAttribute(key, val);
+        eLink.setAttribute(key, val);
     });
     //
-    (document).head.appendChild(link);
+    (document).head.appendChild(eLink);
 });
 
 
@@ -99,4 +82,4 @@ commonAttributes.forEach((attrs) => {
 //
 
 
-/*|*/
+// !-! //

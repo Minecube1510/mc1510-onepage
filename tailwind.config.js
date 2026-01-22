@@ -7,9 +7,9 @@
 //* * *//
 
 /* Tailwind - Main Config */
-const linkBegin = ("./");
+const linkBegin = "./";
 function pathConfig(path) {
-    return ((linkBegin) + (path));
+  return linkBegin + path;
 }
 //.
 export default {
@@ -22,19 +22,19 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-            ("Inter"),
-            ("system-ui"),
-            ("sans-serif"),
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
         ],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
 };
-
 
 /* Later */
 //
-
 
 //

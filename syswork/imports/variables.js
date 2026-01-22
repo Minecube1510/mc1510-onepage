@@ -7,16 +7,24 @@
 //* * *//
 
 
-/* Characetr Variables */
-export const jsVar_Blank = ("");
-export const jsVar_Space = (" ");
-//
-export const jsVar_Dash = ("/");
-//
-export const jsVar_Plus = ("+");
-export const jsVar_Minus = ("-");
+/* Variable - Characters */
+export const varOne = {
+    Blank: (""),
+    Space: (" "),
+    //
+    Dash: ("/"),
+    Spot: ("."),
+    Coma: (","), Comma: (","),
+    //
+    Plus: ("+"),
+    Minus: ("-"),
+};
 //* * *//
 //
 
 
+/* Variable - Later... */
 //
+
+
+// !-! //
