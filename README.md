@@ -30,6 +30,13 @@
     git checkout main
     git merge dev
     git push origin main
+
+    Merge [dev] to [main] formula:
+    git checkout main
+    git pull origin main
+    git checkout dev
+    git merge main
+    git push origin dev
 -->
 
 Linking:
