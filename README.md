@@ -25,18 +25,18 @@
     .
 
     Merge [main] to [dev] formula:
-    git checkout dev
-    git pull origin dev
-    git checkout main
-    git merge dev
-    git push origin main
+git checkout dev
+git pull origin dev
+git checkout main
+git merge dev
+git push origin main
 
     Merge [dev] to [main] formula:
-    git checkout main
-    git pull origin main
-    git checkout dev
-    git merge main
-    git push origin dev
+git checkout main
+git pull origin main
+git checkout dev
+git merge main
+git push origin dev
 -->
 
 Linking:
