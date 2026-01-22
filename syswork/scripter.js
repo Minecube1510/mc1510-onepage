@@ -1,118 +1,59 @@
 /*
  *
- * Name: scripter.js
- * syswork/scripter.js
+ * Name: "scripter.js"
+ * Link: "syswork/scripter.js"
  * 
  */
 //* * *//
 
 /* Imports */
-//...
-
-
-/* Vars (Temporary) */
-const jsVar_Blank = ("");
-//
-const jsVar_Dash = ("/");
-//
-const jsVar_Plus = ("+");
-const jsVar_Minus = ("-");
-
-
-/* Funcs - Basics */
-// Shorty JS Functings
-function jsUpper(string) {
-    return (string.toUpperCase());
-}
-function jsLower(string) {
-    return (string.toLowerCase());
-}
-//
-function jsGetId(string) {
-    return (document.getElementById(
-        jsLower(string)
-    ).name);
-}
-function jsGetName(string) {
-    return (document.getElementsByName(
-        jsLower(string)
-    ).name);
-}
-// New JS Combine Functings //
-function jsProper(string) {
-    if (!(string)) {
-        return (jsVar_Blank);
-    }
-    return (
-        (jsUpper(string.charAt(0)))
-        + (jsLower(string.slice(1)))
-    );
-}
-//* * *//
-//
-
-
-/* Funcs - Made */
-function linkPathering(arrays) {
-    return ((arrays).join(jsVar_Dash));
-}
-function linkPath_Begin(arrays) {
-    return ((jsVar_Dash) + ((arrays).join(jsVar_Dash)));
-}
+import * as jsVars from "./imports/variables.js";
+import * as jsFuncs from "./imports/functings.js";
 //* * *//
 //
 
 
 /* Identic */
 // Link Types
-const linkType_Icon = jsLower("icon");
-const linkType_ImageXIcon = jsLower("image/x-icon");
-const linkType_ImagePng = jsLower("image/png");
+const linkType_Icon = jsFuncs.jsLower("icon");
+const linkType_ImageXIcon = jsFuncs.jsLower("image/x-icon");
+const linkType_ImagePng = jsFuncs.jsLower("image/png");
 //* * *//
 // GitHub Info
-const github_User = jsProper("Minecube1510");
-const github_Repo = jsLower("mc1510-onepage");
-const github_Assets = jsProper("Minecube1510");
+const github_User = jsFuncs.jsProper("Minecube1510");
+const github_Repo = jsFuncs.jsLower("mc1510-onepage");
+const github_Assets = jsFuncs.jsProper("Minecube1510");
 //
-const pathing_Assets = linkPathering([
-    jsLower("syswork"),
-    jsLower("asset"),
+const pathing_Assets = jsFuncs.linkPathering([
+    ("syswork"), ("assets"),
+    ("favics"),
+]);
+const pathFavicer = jsFuncs.linkPathering([
+    //(github_Repo),
+    (pathing_Assets),
 ]);
 //
-const pathFavic_Ico = linkPath_Begin([
-    (github_Repo), (pathing_Assets),
-    ("emoji-test.ico"),
+const pathFavic_Ico = jsFuncs.linkPathering([
+    (pathFavicer), ("emoji-test.ico"),
 ]);
-const pathFavic_Png = linkPath_Begin([
-    (github_Repo), (pathing_Assets),
-    ("emoji-test.png"),
+const pathFavic_Png = jsFuncs.linkPathering([
+    (pathFavicer), ("emoji-test.png"),
 ]);
 //* * *//
 //
 
 
-/* Later */
-//
-
-
-/* Uji Coba */
-// Title
+/* Title */
 const pageTitle = ((document).title);
-const baseTitle = jsGetId("index-title");
-const webTitle = jsProper("OnePage Project");
+const baseTitle = jsFuncs.jsGetId("index-title");
+const webTitle = jsFuncs.jsProper("OnePage Project");
 //
 baseTitle.textContent = ([
     webTitle, pageTitle
 ].join(" - "));
-//
-/*
-*
-*/
-// Favicon
-//
-const iconIcoPath = (pathFavic_Ico);
-const iconPngPath = (pathFavic_Png);
-//
+
+
+/* Favicon */
 const commonAttributes = [
     { rel: linkType_Icon, type: linkType_ImageXIcon },
     { rel: "shortcut icon", type: linkType_ImageXIcon },
@@ -121,20 +62,38 @@ const commonAttributes = [
     { rel: "apple-touch-icon", type: linkType_ImageXIcon, sizes: "160x160" },
     { rel: linkType_Icon, type: linkType_ImageXIcon }
 ];
-
+//
 commonAttributes.forEach((attrs) => {
     const link = ((document).createElement("link"));
     const isPng = ((attrs.type) === (linkType_ImagePng));
     link.href = ((isPng)
-        ? (iconPngPath) : (iconIcoPath)
+        ? (pathFavic_Png)
+        : (pathFavic_Ico)
     );
-    
+    //
     Object.entries(attrs).forEach(([key, val]) => {
         link.setAttribute(key, val);
     });
-
+    //
     (document).head.appendChild(link);
 });
+
+
+/* Later-1 */
+//
+
+
+/* Later-2 */
+//
+
+
+/* Later-3 */
+//
+
+
+/* Uji Coba */
+// Favicon
+//
 
 
 /*|*/
