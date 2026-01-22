@@ -4,7 +4,9 @@
   "description": "> *ID*: Hanya berisi **Project Web** yang merupakan satu halaman.<br>\r > *EN*: It only contains **Web Project** as a single page.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./syswork/styles/imports/tailwind.input.css -o ./syswork/styles/imports/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./syswork/styles/imports/tailwind.input.css -o ./syswork/styles/imports/tailwind.css --watch"
   },
   "repository": {
     "type": "git",

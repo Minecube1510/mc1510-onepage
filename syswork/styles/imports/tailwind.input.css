@@ -12,7 +12,7 @@
 /**/
 @layer base {
   body {
-    @apply font-sans;
+    font-family: ui-sans-serif, system-ui, sans-serif;
   }
 }
 
