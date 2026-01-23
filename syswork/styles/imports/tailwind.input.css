@@ -37,12 +37,29 @@
   h5 { @apply text-lg font-medium; }
   h6 { @apply text-base font-medium; }
 
+  /* * */
+  /**/
+
   /**/
 }
 @layer components {
   /**/
 
   /*
+    || --- ~~!~~ --- ||
+    Al-Whited and Al-Blacked
+    || --- ~~!~~ --- ||
+  */
+  /* White Full */
+  .altwin-bg-white { @apply bg-white; }
+  .altwin-text-white { @apply text-white; }
+  .altwin-border-white { @apply border-white; }
+  /* Black Full */
+  .altwin-bg-black { @apply bg-black; }
+  .altwin-text-black { @apply text-black; }
+  .altwin-border-black { @apply border-black; }
+  /*
+  *//*
     || --- ~~!~~ --- ||
     Bootstrap Settings
     || --- ~~!~~ --- ||

@@ -32,14 +32,19 @@ export function jsGetName(string) {
         jsLower(string)
     ));
 }
-//* * *//
+//
+export function jsCreatE(string) {
+    return ((document).createElement(
+        jsLower(string)
+    ));
+}
 /*
 *
 */
 // New JS Combine Functings //
 export function jsProper(string) {
     if (!(string)) {
-        return (jsVars.jsVar_Blank);
+        return (jsVars.varOne.Blank);
     }
     return (
         (jsUpper((string).charAt(0)))
@@ -53,9 +58,14 @@ export function jsProper(string) {
 /* In Mades */
 // Jointers //
 export function textSentancer(arrays) {
-    return arrays
+    return ((arrays)
         .map((item) => (item))
-        .join(jsVars.varOne.Space);
+        .join(jsVars.varOne.Space));
+}
+export function sentanClasser(arrays) { 
+    return jsLower((arrays)
+        .map((item) => (item))
+        .join(jsVars.varOne.Space));
 }
 // Linkers //
 export function linkPathering(arrays) {

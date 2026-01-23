@@ -13,14 +13,53 @@
 /* Customizes */
 @layer base {
   /**/
+
+  .index-content {
+    @apply
+      min-h-screen
+
+      flex flex-col
+      justify-center items-center
+      h-full
+      ;
+    @apply
+      text-center
+      ;
+  }
+
+  /**/
 }
 @layer components {
+  /**/
+
+  /*
+    || --- ~~!~~ --- ||
+    Index Elements Customs
+    For "h" elements
+    || --- ~~!~~ --- ||
+  */
   .index-h1,
   .index-h1 h1 {
     @apply mb-2;
   }
+  .index-h2,
+  .index-h2 h2 {
+    @apply mb-2;
+  }
+  .index-h3,
+  .index-h3 h3 {
+    @apply mb-1;
+  }
+  /***/
+  /**/
+
+  /**/
 }
 @layer utilities {
+  /**/
+
+  /**/
+
   /**/
 }
 

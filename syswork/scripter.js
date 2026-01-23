@@ -31,24 +31,24 @@ baseTitle.textContent = ([
 
 
 /* Favicon */
-// daftar rel yang mau dipakai
 const rawRels = [
-    (jsIdentic.e_LinkTypes.icon),
+    ((jsIdentic).e_LinkTypes.icon),
     ("shortcut icon"),
     ("apple-touch-icon"),
     ("apple-touch-icon-precomposed"),
     ("apple-touch-icon"),
-    (jsIdentic.e_LinkTypes.icon),
+    ((jsIdentic).e_LinkTypes.icon),
 ];
 const commonAttributes = ((rawRels).map((rel) => ({
     rel: jsFuncs.jsLower(rel),
     type: jsIdentic.e_LinkTypes.imageXIcon,
     sizes: jsFuncs.jsLower("160x160"),
 })));
-
-//
-commonAttributes.forEach((attrs) => {
-    const eLink = ((document).createElement("link"));
+/*
+*
+*/
+(commonAttributes).forEach((attrs) => {
+    const eLink = ((jsFuncs).jsCreatE("link"));
     const isPng = (
         (attrs.type) === ((jsIdentic).e_LinkTypes.imagePng)
     );
@@ -78,7 +78,6 @@ commonAttributes.forEach((attrs) => {
 
 
 /* Uji Coba */
-// Favicon
 //
 
 

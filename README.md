@@ -11,8 +11,8 @@
 # [-] Ver (0.1) : Later
 
 "Commit Now:"
-# [Dev] Learning Web Basics
-# [Dev] Learning Web Basics - X
+# [Dev] Improving Completely Web
+# [Dev] Improving Completely Web - X
 |
 "Commit Turns:"
 # [Dev] Later
