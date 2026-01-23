@@ -9,7 +9,7 @@
 
 /* Variable - Characters */
 export const varOne = {
-    Blank: (""),
+    Blank: (""), Empty: (""),
     Space: (" "),
     //
     Dash: ("/"),

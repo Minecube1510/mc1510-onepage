@@ -10,22 +10,17 @@
 /***/
 /*?*/
 
+
 /* Customizes */
 @layer base {
   /**/
 
-  .index-content {
-    @apply
-      min-h-screen
-
-      flex flex-col
-      justify-center items-center
-      h-full
-      ;
-    @apply
-      text-center
-      ;
-  }
+  /*
+    || --- ~~!~~ --- ||
+    Later...
+    || --- ~~!~~ --- ||
+  */
+  /**/
 
   /**/
 }
@@ -34,28 +29,10 @@
 
   /*
     || --- ~~!~~ --- ||
-    Index Elements Customs
-    For "h" elements
+    Later . . .
     || --- ~~!~~ --- ||
   */
-  .index-h1,
-  .index-h1 h1 {
-    @apply select-none
-      mb-3
-      ;
-  }
-  .index-h2,
-  .index-h2 h2 {
-    @apply select-none
-      mb-2
-      ;
-  }
-  .index-h3,
-  .index-h3 h3 {
-    @apply select-none
-      mb-1
-      ;
-  }
+  /**/
   /***/
   /*
   *//*
@@ -116,8 +93,8 @@
       /**/
       group-hover:scale-x-92
       lg:group-hover:scale-x-96
-      group-active:scale-x-46
-      lg:group-active:scale-x-48
+      group-active:scale-x-74
+      lg:group-active:scale-x-46
     ;
   }
 
@@ -130,5 +107,7 @@
 
   /**/
 }
+/***/
+
 
 /* * */

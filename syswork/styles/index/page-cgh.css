@@ -1,0 +1,104 @@
+/*
+ *
+ * Name: "page-cgh.css"
+ * Link: "syswork/styles/index/page-cgh.css"
+ *
+ */
+
+/* Imports */
+/* @import "tailwindcss"; */
+/***/
+/*?*/
+
+/* Customizes */
+@layer base {
+  /**/
+
+  /**/
+
+  /**/
+}
+@layer components {
+  /**/
+
+  /*
+    || --- ~~!~~ --- ||
+    Begin Customizing
+    || --- ~~!~~ --- ||
+  */
+  .cgh-title {
+    @apply
+        transition-all duration-150 ease-out
+    ;
+    @apply
+        hover:scale-[1.15]
+        active:scale-[0.95]
+    ;
+  }
+  /*
+  */ /*
+    || --- ~~!~~ --- ||
+    Table Create
+    || --- ~~!~~ --- ||
+  */
+  .cgh-table {
+    @apply
+        w-full
+        /* border-collapse */
+        ;
+    @apply
+        border-collapse
+        ;
+  }
+  /**/
+    .cgh-th {
+        @apply
+            border
+            border-slate-300
+            bg-slate-100
+            px-4
+            py-3
+            text-left
+            font-semibold
+            ;
+    }
+    .cgh-tr {
+        @apply
+            hover:bg-slate-50
+            transition
+            ;
+    }
+    .cgh-td {
+        @apply
+            border
+            border-slate-200
+            px-4
+            py-3
+            ;
+    }
+  /*
+  */ /*
+    || --- ~~!~~ --- ||
+    Table Display Basis
+    || --- ~~!~~ --- ||
+  */
+  .cgh-for-display {
+    @apply border
+        space-y-4;
+    @apply overflow-x-auto
+        shadow-sm;
+  }
+  /**/
+
+  /**/
+}
+@layer utilities {
+  /**/
+
+  /**/
+
+  /**/
+}
+/***/
+
+/* * */

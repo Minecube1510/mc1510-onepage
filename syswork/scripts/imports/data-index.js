@@ -7,7 +7,7 @@
 //* * *//
 
 /* Data - Pages List */
-export const index_Pl = [
+export const index_Data_Pl = [
     [
         ("Comparasion of Gosei Tribes and Hololive ID"),
         ("cgh"),

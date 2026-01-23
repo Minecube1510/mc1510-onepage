@@ -8,21 +8,21 @@
 
 /* Imports */
 import * as jsVars
-    from "./imports/variables.js";
+    from "/syswork/imports/variables.js";
 import * as jsFuncs
-    from "./imports/functings.js";
+    from "/syswork/imports/functings.js";
 //* * *//
 import * as jsIdentic
-    from "./imports/identity.js";
+    from "/syswork/imports/identity.js";
 //
 
 
 /* Title */
 const pageTitle = ((document).title);
-const baseTitle = (jsFuncs.jsGetId("index-title"));
-const webTitle = (jsFuncs.textSentancer([
+const baseTitle = ((jsFuncs).jsGetId("page-web-title"));
+const webTitle = ((jsFuncs).textSentancer([
     ("OnePage"),
-    jsFuncs.jsProper("Project"),
+    ((jsFuncs).jsProper("Project")),
 ]));
 //
 baseTitle.textContent = ([
@@ -31,34 +31,33 @@ baseTitle.textContent = ([
 
 
 /* Favicon */
-const rawRels = [
+const rel_Ati = (jsFuncs.jsLower("apple-touch-icon"));
+const know_Rels = [
     ((jsIdentic).e_LinkTypes.icon),
     ("shortcut icon"),
-    ("apple-touch-icon"),
+    (rel_Ati),
     ("apple-touch-icon-precomposed"),
-    ("apple-touch-icon"),
+    (rel_Ati),
     ((jsIdentic).e_LinkTypes.icon),
 ];
-const commonAttributes = ((rawRels).map((rel) => ({
-    rel: jsFuncs.jsLower(rel),
-    type: jsIdentic.e_LinkTypes.imageXIcon,
-    sizes: jsFuncs.jsLower("160x160"),
+const common_Attrs = ((know_Rels).map((rel) => ({
+    rel: ((jsFuncs).jsLower(rel)),
+    type: ((jsIdentic).e_LinkTypes.imageXIcon),
+    sizes: ((jsFuncs).jsLower("160x160")),
 })));
 /*
-*
+    Common Attributers
 */
-(commonAttributes).forEach((attrs) => {
+(common_Attrs).forEach((attrs) => {
     const eLink = ((jsFuncs).jsCreatE("link"));
-    const isPng = (
-        (attrs.type) === ((jsIdentic).e_LinkTypes.imagePng)
-    );
-    eLink.href = ((isPng)
+    const isPng = ((attrs.type) === ((jsIdentic)
+        .e_LinkTypes.imagePng));
+    (eLink).href = ((isPng)
         ? (jsIdentic.pathFavics.png)
-        : (jsIdentic.pathFavics.ico)
-    );
+        : (jsIdentic.pathFavics.ico));
     //
     Object.entries(attrs).forEach(([key, val]) => {
-        eLink.setAttribute(key, val);
+        (eLink).setAttribute(key, val);
     });
     //
     (document).head.appendChild(eLink);

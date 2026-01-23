@@ -57,7 +57,11 @@ export function jsProper(string) {
 
 /* In Mades */
 // Jointers //
-export function declareFile(name, format) { 
+export function declareFile_Basis(name, format) { 
+    return ([ (name), jsLower(format), ]
+        .join(jsVars.varOne.Spot));
+}
+export function declareFile_Lower(name, format) { 
     return jsLower([
         (name), (format),
     ].join(jsVars.varOne.Spot));
@@ -74,15 +78,25 @@ export function sentanClasser(arrays) {
         .join(jsVars.varOne.Space));
 }
 // Linkers //
-export function linkPathering(arrays) {
+export function linkPathering_Basis(arrays) {
+    return arrays
+        .map((item) => (item))
+        .join(jsVars.varOne.Dash);
+}
+export function linkPathering_Lower(arrays) {
     return arrays
         .map((item) => (jsLower(item)))
         .join(jsVars.varOne.Dash);
 }
 //
-export function linkPath_Begin(arrays) {
+export function linkPath_Begin_Basis(arrays) {
     return ((jsVars.varOne.Dash) +
-        (linkPathering(arrays))
+        (linkPathering_Basis(arrays))
+    );
+}
+export function linkPath_Begin_Lower(arrays) {
+    return ((jsVars.varOne.Dash) +
+        (linkPathering_Lower(arrays))
     );
 }
 //* * *//

@@ -1,9 +1,8 @@
 /* titilng.js */
 
-
 /* Title Sys */
 const titleMap = {
-  "index-title": (el) => {
+  "page-web-title": (el) => {
     const original = el.textContent;
     el.textContent = `Project Web - ${original}`;
     document.title = el.textContent;
@@ -12,10 +11,9 @@ const titleMap = {
     const original = el.textContent;
     el.textContent = `[OnePage] ${original}`;
     document.title = el.textContent;
-  }
+  },
 };
 /* Title Sys */
-
 
 /* Title Work */
 Object.keys(titleMap).forEach((id) => {
