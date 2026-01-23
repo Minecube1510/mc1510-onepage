@@ -57,6 +57,12 @@ export function jsProper(string) {
 
 /* In Mades */
 // Jointers //
+export function declareFile(name, format) { 
+    return jsLower([
+        (name), (format),
+    ].join(jsVars.varOne.Spot));
+}
+//
 export function textSentancer(arrays) {
     return ((arrays)
         .map((item) => (item))

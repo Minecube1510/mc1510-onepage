@@ -40,7 +40,7 @@
   */
   .index-h1,
   .index-h1 h1 {
-    @apply mb-2;
+    @apply mb-3;
   }
   .index-h2,
   .index-h2 h2 {

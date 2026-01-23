@@ -17,7 +17,7 @@ export const varOne = {
     Uscore: ("_"),
     HashT: ("#"),
     //
-    Spot: ("."),
+    Dot: ("."), Spot: ("."),
     Coma: (","), Comma: (","),
     Excla: ("!"),
     Quest: ("?"),
