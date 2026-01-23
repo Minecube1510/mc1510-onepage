@@ -7,15 +7,15 @@
 //* * *//
 
 /* Tailwind - Main Config */
-const linkBegin = "./";
+const linkBegin = ("./");
 function pathConfig(path) {
-  return linkBegin + path;
+  return ((linkBegin) + (path));
 }
 //.
 export default {
   content: [
-    "./index.html",
-    //("./**/*.html"),
+    //("./index.html"),
+    ("./**/*.html"),
     //("./syswork/**/*.js"),
   ],
   theme: {
@@ -30,7 +30,7 @@ export default {
     },
   },
   plugins: [
-    require("@tailwindcss/typography"),
+    //require("@tailwindcss/typography"),
   ],
 };
 

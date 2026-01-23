@@ -13,18 +13,34 @@
 /* @import "tailwindcss/preflight"; */
 /* @import "tailwindcss/utilities"; */
 /***/
-/*?*/
+
+
+/* Importer Files (Up) */
+@import "../page-index.css";
+/***/
+/**/
 
 
 /* Tailwind Setup Customs */
-@layer utilities {
+@layer base {
+  /**/
+
   /*
     || --- ~~!~~ --- ||
     For "h" elements
     || --- ~~!~~ --- ||
   */
-  .h1 { @apply text-4xl font-bold tracking-tight; }
-  .h2 { @apply text-3xl font-semibold; }
+  h1 { @apply text-4xl font-bold tracking-tight; }
+  h2 { @apply text-3xl font-semibold; }
+  h3 { @apply text-2xl font-semibold; }
+  h4 { @apply text-xl font-medium; }
+  h5 { @apply text-lg font-medium; }
+  h6 { @apply text-base font-medium; }
+
+  /**/
+}
+@layer components {
+  /**/
 
   /*
     || --- ~~!~~ --- ||
@@ -60,7 +76,22 @@
   .bs-border-info { @apply border-cyan-500; }
   .bs-border-light { @apply border-gray-200; }
   .bs-border-dark { @apply border-gray-900; }
+
+  /**/
 }
+@layer utilities {
+  /**/
+
+  /**/
+
+  /**/
+}
+
+
+/* Importer Files (Down) */
+/* @import "../page-index.css"; */
+/***/
+/**/
 
 
 /* * */

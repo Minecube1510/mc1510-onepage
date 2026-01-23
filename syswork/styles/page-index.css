@@ -1,12 +1,27 @@
 /*
  *
- * Name: "tailwind.input.css"
- * Link: "syswork/styles/imports/tailwind.input.css"
+ * Name: "page-index.css"
+ * Link: "syswork/styles/page-index.css"
  *
  */
 
-/* Later */
-/**/
+/* Imports */
+/* @import "tailwindcss"; */
+/***/
+/*?*/
 
+/* Customizes */
+@layer base {
+  /**/
+}
+@layer components {
+  .index-h1,
+  .index-h1 h1 {
+    @apply mb-2;
+  }
+}
+@layer utilities {
+  /**/
+}
 
 /* * */
