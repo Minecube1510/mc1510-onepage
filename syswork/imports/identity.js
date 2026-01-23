@@ -53,8 +53,8 @@ export const github_Data = Object.fromEntries(
 
 
 /* Identic - Path */
-export const pathing_Assets = ((jsFuncs).linkPathering([
-    (jsVars.varOne.Spot),
+export const pathing_Assets = ((jsFuncs).linkPath_Begin([
+    //(jsVars.varOne.Spot),
     (github_Data.path_assets),
 ]));
 //* * *//

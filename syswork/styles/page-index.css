@@ -40,18 +40,86 @@
   */
   .index-h1,
   .index-h1 h1 {
-    @apply mb-3;
+    @apply select-none
+      mb-3
+      ;
   }
   .index-h2,
   .index-h2 h2 {
-    @apply mb-2;
+    @apply select-none
+      mb-2
+      ;
   }
   .index-h3,
   .index-h3 h3 {
-    @apply mb-1;
+    @apply select-none
+      mb-1
+      ;
   }
   /***/
-  /**/
+  /*
+  *//*
+    || --- ~~!~~ --- ||
+    List Basis and Animatings
+    || --- ~~!~~ --- ||
+  */
+  .index-page-list,
+  .index-page-list a {
+    @apply
+      select-none relative block
+      transition-all duration-300 ease-out
+    ;
+    @apply
+      mx-auto px-1
+      /**/
+      w-[44rem]
+      lg:w-[76rem]
+    ;
+    /**/
+    @apply
+      hover:scale-[1.2]
+      active:scale-[0.9]
+    ;
+  }
+  /*~*-*~*/
+  .link-list-text,
+  .link-list-text span {
+    @apply
+      select-none
+      relative z-10
+    ;
+    @apply
+      active:font-bold
+    ;
+  }
+  .link-list-line,
+  .link-list-line span {
+    @apply
+      select-none
+      pointer-events-none bg-current
+      transition-transform duration-300 ease-out
+    ;
+    /**/
+    @apply
+      absolute origin-center
+    ;
+    @apply
+      /*
+        w-full
+      */
+      inset-x-4
+      h-px
+    ;
+    @apply
+      /* left-0 */
+      bottom-0 scale-x-0
+      /**/
+      group-hover:scale-x-92
+      lg:group-hover:scale-x-96
+      group-active:scale-x-46
+      lg:group-active:scale-x-48
+    ;
+  }
 
   /**/
 }
