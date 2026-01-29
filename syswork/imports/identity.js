@@ -41,12 +41,19 @@ export const e_LinkTypes = Object.fromEntries(
 const github_User = {
   name: jsFuncs.jsProper("Minecube1510"),
   repo: jsFuncs.jsLower("mc1510-onepage"),
-  path_assets: jsFuncs.linkPathering_Lower(["syswork", "assets"]),
+  path_assets: jsFuncs.linkPathering_Lower([
+    /*
+     * [main]: Activate
+     * [dev]: De-Activate
+     */
+    ("mc1510-onepage"),
+    /**/
+    ("syswork"), ("assets"),
+  ]),
 };
 export const github_Data = Object.fromEntries(
   Object.entries(github_User).map(([key, value]) => [
-    key,
-    jsFuncs.jsLower(value),
+    (key), ((jsFuncs).jsLower(value)),
   ]),
 );
 
@@ -74,7 +81,9 @@ const favicFiles = {
 export const pathFavics = Object.fromEntries(
   Object.entries(favicFiles).map(([key, value]) => [
     key,
-    jsFuncs.linkPathering_Lower([pathFavicer, `emoji-test.${value}`]),
+    jsFuncs.linkPathering_Lower([
+      (pathFavicer), (`emoji-test.${value}`),
+    ]),
   ]),
 );
 //* * *//

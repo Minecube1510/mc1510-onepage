@@ -23,6 +23,7 @@ import { index_Data_Pl } from
   //"./imports/data-index.js";
 //
 
+
 /* Display Pages List */
 // Persiapan Listing per Halaman
 function render_Html(htmlName) {
@@ -53,28 +54,32 @@ index_Data_Pl.forEach(([listText, listLink], listIndex) => {
   text_Pl.textContent = listText;
   //
   // Classing - Main Link //
-  link_Pl.className = jsFuncs.sentanClasser([
-    `mb-${mb_Valter}`,
-    "group",
-    "index-page-list",
+  link_Pl.className = jsFuncs.sentanClasser([(`group`),
+    (`mb-${mb_Valter}`), (`index-page-list`),
   ]);
   // Classing - Link Line //
-  line_Pl.className = jsFuncs.sentanClasser(["link-list-line"]);
+  line_Pl.className = jsFuncs.sentanClasser([
+    (`link-list-line`),
+  ]);
   // Classing - Link Text //
-  text_Pl.className = jsFuncs.sentanClasser(["link-list-text"]);
+  text_Pl.className = jsFuncs.sentanClasser([
+    (`link-list-text`),
+  ]);
   //
   // Attributing Element(s) //
-  link_Pl.href =
-    typeof listLink === "string" ? render_Html(listLink) : hashLink;
-  link_Pl.draggable = false;
+  link_Pl.href = (typeof
+    (listLink) === ("string") ? (render_Html(listLink)) : (hashLink));
+  link_Pl.draggable = (false);
   //
   // AppEnd //
-  line_Pl.append(); // Kosong, isinya via CSS
+  line_Pl.append();  // Kosong, isinya via CSS
   link_Pl.append(text_Pl, line_Pl);
   content_Pl.appendChild(link_Pl);
 });
 
+
 /* Uji Coba */
 //
+
 
 // !-! //

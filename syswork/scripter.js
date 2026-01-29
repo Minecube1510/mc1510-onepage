@@ -23,13 +23,12 @@ import * as jsIdentic from
 /* Title */
 const pageTitle = ((document).title);
 const baseTitle = ((jsFuncs).jsGetId("page-web-title"));
-const webTitle = ((jsFuncs).textSentancer([
-    ("OnePage"),
+const webTitle = ((jsFuncs).textSentancer([("OnePage"),
     ((jsFuncs).jsProper("Project")),
 ]));
 //
 baseTitle.textContent = ([
-    webTitle, pageTitle
+    (webTitle), (pageTitle)
 ].join(" - "));
 
 
