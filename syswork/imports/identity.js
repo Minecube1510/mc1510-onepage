@@ -7,12 +7,12 @@
 //* * *//
 
 /* Imports */
-import * as jsVars
-  from "./variables.js";
-  //from "./variables.js";
+import * as jsVars from
+  "./variables.js";
+  //"./variables.js";
 import * as jsFuncs from
   "./functings.js";
-  //from "./functings.js";
+  //"./functings.js";
 //* * *//
 //
 

@@ -7,16 +7,16 @@
 //* * *//
 
 /* Imports */
-import * as jsVars
-    from "/mc1510-onepage/syswork/imports/variables.js";
+import * as jsVars from
+    "/mc1510-onepage/syswork/imports/variables.js";
     //from "/syswork/imports/variables.js";
-import * as jsFuncs
-    from "/mc1510-onepage/syswork/imports/functings.js";
-    //from "/syswork/imports/functings.js";
+import * as jsFuncs from
+    "/mc1510-onepage/syswork/imports/functings.js";
+    //"/syswork/imports/functings.js";
 //* * *//
-import * as jsIdentic
-    from "/mc1510-onepage/syswork/imports/identity.js";
-    //from "/syswork/imports/identity.js";
+import * as jsIdentic from
+    "/mc1510-onepage/syswork/imports/identity.js";
+    //"/syswork/imports/identity.js";
 //
 
 
