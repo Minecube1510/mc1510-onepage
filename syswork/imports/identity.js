@@ -1,0 +1,92 @@
+/*
+ *
+ * Name: "identity.js"
+ * Link: "syswork/imports/identity.js"
+ *
+ */
+//* * *//
+
+/* Imports */
+import * as jsVars from
+  "./variables.js";
+  //"./variables.js";
+import * as jsFuncs from
+  "./functings.js";
+  //"./functings.js";
+//* * *//
+//
+
+/* Identic - String */
+// Link Types //
+// Raw mapping tanpa jsLower manual
+const link_Types = {
+  icon: "icon",
+  imageXIcon: "image/x-icon",
+  imagePng: "image/png",
+  imageSvg: "image/svg+xml",
+  imageJpeg: "image/jpeg",
+  imageGif: "image/gif",
+  imageWebp: "image/webp",
+};
+export const e_LinkTypes = Object.fromEntries(
+  Object.entries(link_Types).map(([key, value]) => [
+    key,
+    jsFuncs.jsLower(value),
+  ]),
+);
+/*
+ *
+ */
+// GitHub Info //
+const github_User = {
+  name: jsFuncs.jsProper("Minecube1510"),
+  repo: jsFuncs.jsLower("mc1510-onepage"),
+  path_assets: jsFuncs.linkPathering_Lower([
+    /*
+     * [main]: Activate
+     * [dev]: De-Activate
+     */
+    ("mc1510-onepage"),
+    /**/
+    ("syswork"), ("assets"),
+  ]),
+};
+export const github_Data = Object.fromEntries(
+  Object.entries(github_User).map(([key, value]) => [
+    (key), ((jsFuncs).jsLower(value)),
+  ]),
+);
+
+/* Identic - Path */
+export const pathing_Assets = jsFuncs.linkPath_Begin_Lower([
+  //(jsVars.varOne.Spot),
+  github_Data.path_assets,
+]);
+//* * *//
+export const pathFavicer = jsFuncs.linkPathering_Lower([
+  pathing_Assets,
+  "favics",
+]);
+/*
+ *
+ */
+// daftar ekstensi yang mau dipakai
+const favicFiles = {
+  ico: "ico",
+  png: "png",
+  svg: "svg",
+  gif: "gif",
+};
+// mapping otomatis
+export const pathFavics = Object.fromEntries(
+  Object.entries(favicFiles).map(([key, value]) => [
+    key,
+    jsFuncs.linkPathering_Lower([
+      (pathFavicer), (`emoji-test.${value}`),
+    ]),
+  ]),
+);
+//* * *//
+//
+
+// !-! //
