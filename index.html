@@ -1,29 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="id" class="font-sans select-none">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-<head>
+    <!--
+      Please add:
+      "mc1510-onepage"
+      |
+      Likely:
+      "/mc1510-onepage/"
+      "mc1510-onepage/"
+      "/mc1510-onepage"
+    -->
 
-  <link href="syswork/css/linkering.css" rel="stylesheet" type="text/css">
+    <!--
+      [main] src: {-Bawah-}
+      "/mc1510-onepage/syswork/styles/imports/tailwind.css"
+      |
+      [dev] src: {-Bawah-}
+      "/syswork/styles/imports/tailwind.css"
+    -->
+    <link rel="stylesheet"
+    href="/mc1510-onepage/syswork/styles/imports/tailwind.css">
 
-  <script type="module" src="syswork/js/bootstraper.js"></script>
-  <script type="module" src="syswork/js/favics.js"></script>
-  <script type="module" src="syswork/js/link-pro.js"></script>
-  <script type="module" src="syswork/js/titling.js"></script>
+    <script type="module"
+    src="/mc1510-onepage/syswork/scripter.js">
+      /*
+       * [main] src: {-Atas-}
+       * "/mc1510-onepage/syswork/scripter.js"
+       *
+       * [dev] src: {-Atas-}
+       * "/syswork/scripter.js"
+       */
+    </script>
+    <script type="module"
+    src="/mc1510-onepage/syswork/scripts/page-index.js">
+      /*
+       * [main] src: {-Atas-}
+       * "/mc1510-onepage/syswork/scripts/page-index.js"
+       *
+       * [dev] src: {-Atas-}
+       * "/syswork/scripts/page-index.js"
+       */
+    </script>
 
-  <title id="index-title">
-    Minecube1510
-  </title>
-</head>
+    <title id="page-web-title" name="">
+      By Minecube1510
+    </title>
+  </head>
 
 
-<body>
-    <div class="container py-5 text-center">
-      <h1 class="mb-4">
+  <body class="">
+    <div id="index-container" class="page-content">
+      <h1 class="paginged-h1 bs-text-primary mt-3">
         My OnePage Project
-      </h1>
-      <div id="container">
+      </h1><p class="mb-4"></p>
+
+      <div id="page-list" class="">
         <!-- ISI: LINKINGAN INDEX-PROJECT -->
+        <span class="">
+          Halo Dunia!
+        </span>
       </div>
+
     </div>
-</body>
+  </body>
 </html>
