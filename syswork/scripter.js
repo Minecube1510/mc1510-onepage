@@ -8,12 +8,15 @@
 
 /* Imports */
 import * as jsVars
-    from "/syswork/imports/variables.js";
+    from "/mc1510-onepage/syswork/imports/variables.js";
+    //from "/syswork/imports/variables.js";
 import * as jsFuncs
-    from "/syswork/imports/functings.js";
+    from "/mc1510-onepage/syswork/imports/functings.js";
+    //from "/syswork/imports/functings.js";
 //* * *//
 import * as jsIdentic
-    from "/syswork/imports/identity.js";
+    from "/mc1510-onepage/syswork/imports/identity.js";
+    //from "/syswork/imports/identity.js";
 //
 
 
