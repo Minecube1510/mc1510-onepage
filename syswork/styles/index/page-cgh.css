@@ -35,6 +35,18 @@
         active:scale-[0.95]
     ;
   }
+  .cgh-h3 {
+    @apply grid
+      place-items-center
+      ;
+    @apply text-center
+      leading-tight
+      overflow-hidden
+      ;
+    @apply /**/
+      line-clamp-2
+      ;
+  }
   /*
   */ /*
     || --- ~~!~~ --- ||
@@ -42,40 +54,63 @@
     || --- ~~!~~ --- ||
   */
   .cgh-table {
-    @apply
-        w-full
-        /* border-collapse */
-        ;
-    @apply
-        border-collapse
-        ;
+    @apply w-full
+      /* ? */
+      ;
+    @apply border-collapse
+      /* ? */
+      ;
   }
   /**/
-    .cgh-th {
-        @apply
-            border
-            border-slate-300
-            bg-slate-100
-            px-4
-            py-3
-            text-left
-            font-semibold
-            ;
-    }
-    .cgh-tr {
-        @apply
-            hover:bg-slate-50
-            transition
-            ;
-    }
-    .cgh-td {
-        @apply
-            border
-            border-slate-200
-            px-4
-            py-3
-            ;
-    }
+  .cgh-th {
+    @apply text-center
+      px-5 py-3
+      ;
+    @apply font-semibold
+      /**/
+      lg:w-[16rem]
+      w-[12rem]
+      ;
+    @apply border
+    border-slate-300
+    bg-slate-100
+      ;
+  }
+  .cgh-tr {
+    @apply text-center
+      /* ? */
+      ;
+    @apply transition
+    hover:bg-slate-50
+      ;
+  }
+  .cgh-td {
+    @apply text-center
+      align-middle
+      ;
+    @apply border
+    border-slate-200
+      px-4 py-3
+      ;
+  }
+  .cgh-td img {
+    @apply mx-auto
+      /* mb-2 */
+      ;
+  }
+  .cgh-td h3 {
+    @apply my-auto
+      min-h-[0.5rem]
+      ;
+    @apply
+      lg:text-2xl
+      text-[18px]
+      ;
+    @apply
+      lg:font-semibold
+      font-bold
+      ;
+  }
   /*
   */ /*
     || --- ~~!~~ --- ||
@@ -84,9 +119,64 @@
   */
   .cgh-for-display {
     @apply border
-        space-y-4;
+      space-y-4
+      ;
     @apply overflow-x-auto
-        shadow-sm;
+      shadow-sm
+      ;
+    @apply mb-5
+      /*
+        my-3
+      */
+      ;
+  }
+  /*
+  */ /*
+    || --- ~~!~~ --- ||
+    Data Naviga-Toggles
+    || --- ~~!~~ --- ||
+  */
+  .cgh-tabtog {
+    @apply cursor-pointer
+      inline-block
+      transition-all
+      ;
+    @apply duration-150
+      hover:scale-[1.1]
+      /**/
+      active:scale-[0.9]
+      ;
+  }
+  .cgh-tabtog img {
+    @apply 
+      w-[150px]
+      h-[150px]
+      ;
+    @apply 
+      lg:w-[200px]
+      lg:h-[200px]
+      ;
+  }
+  .cgh-tabtog img,
+  .cgh-tabtog h3 {
+    @apply cursor-pointer;
+  }
+  .cgh-textog {
+    @apply font-semibold
+      group-active:font-normal
+      ;
+  }
+  .cgh-textog h3 {
+    @apply
+      font-bold
+      ;
+  }
+  /***/
+  .cgh-tocard {
+    /**/
+  }
+  .cgh-tolink {
+    /**/
   }
   /**/
 
@@ -95,6 +185,77 @@
 @layer utilities {
   /**/
 
+  /*
+    || --- ~~!~~ --- ||
+    Talent Color Code
+    || --- ~~!~~ --- ||
+  */
+  .cgh-stain-text-sky-1 {
+    @apply text-purple-400;
+  }
+  .cgh-stain-bg-sky-1 {
+    @apply bg-violet-400;
+  }
+  /**/
+  .cgh-stain-text-sea-1 {
+    @apply text-lime-500;
+  }
+  .cgh-stain-bg-sea-1 {
+    @apply bg-green-500;
+  }
+  /**/
+  .cgh-stain-text-land-1 {
+    @apply text-pink-400;
+  }
+  .cgh-stain-bg-land-1 {
+    @apply bg-rose-400;
+  }
+  /*
+   *
+   */
+  .cgh-stain-text-sky-2 {
+    @apply text-indigo-700;
+  }
+  .cgh-stain-bg-sky-2 {
+    @apply bg-blue-700;
+  }
+  /**/
+  .cgh-stain-text-sea-2 {
+    @apply text-rose-700;
+  }
+  .cgh-stain-bg-sea-2 {
+    @apply bg-pink-700;
+  }
+  /**/
+  .cgh-stain-text-land-2 {
+    @apply text-yellow-400;
+  }
+  .cgh-stain-bg-land-2 {
+    @apply bg-amber-400;
+  }
+  /*
+   *
+   */
+  .cgh-stain-text-sky-3 {
+    @apply text-gray-400;
+  }
+  .cgh-stain-bg-sky-3 {
+    @apply bg-slate-400;
+  }
+  /**/
+  .cgh-stain-text-sea-3 {
+    @apply text-indigo-900;
+  }
+  .cgh-stain-bg-sea-3 {
+    @apply bg-purple-900;
+  }
+  /**/
+  .cgh-stain-text-land-3 {
+    @apply text-red-500;
+  }
+  .cgh-stain-bg-land-3 {
+    @apply bg-rose-500;
+  }
   /**/
 
   /**/

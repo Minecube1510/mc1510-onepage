@@ -17,8 +17,12 @@
 
 /* Importer Files (Up) */
 @import "../page-index.css";
+/*
+*
+*/
 @import "../index/page-cgh.css";
-/***/
+/**/
+/* ? */
 /**/
 
 
@@ -31,12 +35,12 @@
     For "h" basics elements
     || --- ~~!~~ --- ||
   */
-  h1 { @apply text-4xl font-bold tracking-tight; }
-  h2 { @apply text-3xl font-semibold; }
-  h3 { @apply text-2xl font-semibold; }
-  h4 { @apply text-xl font-medium; }
-  h5 { @apply text-lg font-medium; }
-  h6 { @apply text-base font-medium; }
+  h1 { @apply text-4xl lg:text-4xl font-bold tracking-tight; }
+  h2 { @apply text-3xl lg:text-3xl font-semibold; }
+  h3 { @apply text-2xl lg:text-2xl font-semibold; }
+  h4 { @apply text-xl lg:text-xl font-medium; }
+  h5 { @apply text-lg lg:text-lg font-medium; }
+  h6 { @apply text-base lg:text-base font-medium; }
   /*
   *//*
     || --- ~~!~~ --- ||
