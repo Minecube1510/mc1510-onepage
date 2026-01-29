@@ -8,50 +8,50 @@
 
 /* Imports */
 import * as jsVars from
-  "/mc1510-onepage/syswork/imports/variables.js";
-  //"/syswork/imports/variables.js";
+  // "/mc1510-onepage/syswork/imports/variables.js";
+  "/syswork/imports/variables.js";
 import * as jsFuncs from
-  "/mc1510-onepage/syswork/imports/functings.js";
-  //"/syswork/imports/functings.js";
+  // "/mc1510-onepage/syswork/imports/functings.js";
+  "/syswork/imports/functings.js";
 //* * *//
 import * as jsIdentic from
-  "/mc1510-onepage/syswork/imports/identity.js";
-  //"/syswork/imports/identity.js";
+  // "/mc1510-onepage/syswork/imports/identity.js";
+  "/syswork/imports/identity.js";
 //* * *//
 import * as cgh_BasisData from
   "../imports/cgh/data-basic-cgh.js";
-  //"../imports/cgh/data-basic-cgh.js";
 import * as cgh_CardData from
   "../imports/cgh/data-card-cgh.js";
-  //"../imports/cgh/data-card-cgh.js";
 //
 
 
 /* Variable Sections */
 // One-Vars
-const cgh_VarMinus = jsVars.varOne.Minus;
-const cgh_VarBlank = jsVars.varOne.Blank;
-const cgh_VarSpace = jsVars.varOne.Space;
-const cgh_VarColon = jsVars.varOne.TwinColon;
-const cgh_VarUscore = jsVars.varOne.Uscore;
+const cgh_VarMinus = (jsVars.varOne.Minus);
+const cgh_VarBlank = (jsVars.varOne.Blank);
+const cgh_VarSpace = (jsVars.varOne.Space);
+const cgh_VarColon = (jsVars.varOne.TwinColon);
+const cgh_VarUscore = (jsVars.varOne.Uscore);
 //
 const blank_Data = cgh_VarMinus;
 //
 const keyCgh_AssetsPath = Object.keys(cgh_BasisData.cgh_AssetsPath);
 const valCgh_AssetsPath = Object.values(cgh_BasisData.cgh_AssetsPath);
 //
-const prefix_BKc_Ap = keyCgh_AssetsPath[0].replace(
-  jsVars.varOne.Uscore,
-  cgh_VarSpace,
-);
+const prefix_BKc_Ap = (keyCgh_AssetsPath[0].replace(
+  (cgh_VarUscore), (cgh_VarSpace),
+));
 /*
     Links
 */
 const path_Img_Category = jsFuncs.linkPathering_Lower([
-  "syswork",
-  "assets",
-  "index",
-  "cgh",
+    /*
+     * [main]: Activate
+     * [dev]: De-Activate
+     */
+    // ("mc1510-onepage"),
+  /**/
+  ("syswork"), ("assets"), ("index"), ("cgh"),
 ]);
 const path_Img_TalenCon = jsFuncs.linkPathering_Basis([
   //

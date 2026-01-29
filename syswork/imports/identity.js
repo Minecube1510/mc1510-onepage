@@ -46,7 +46,7 @@ const github_User = {
      * [main]: Activate
      * [dev]: De-Activate
      */
-    ("mc1510-onepage"),
+    // ("mc1510-onepage"),
     /**/
     ("syswork"), ("assets"),
   ]),
