@@ -1,0 +1,42 @@
+/* inform-talent.css */
+
+/* Tombol Gambar Talent */
+.butalent {
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+/* Hover efek */
+.butalent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+/* Active (saat ditekan) */
+.butalent:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Tombol Gambar Talent */
+
+
+/* Tombol Kartu Talent */
+.gocarding {
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+/* Hover efek */
+.gocarding:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+}
+/* Active (saat ditekan) */
+.gocarding:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+}
+/* Tombol Kartu Talent */
