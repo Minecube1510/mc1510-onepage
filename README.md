@@ -21,24 +21,15 @@
 ---
 
 <!--
-    "Gitting"
-    .
+    Activity:
 
-    Merge [main] to [dev] formula:
-    (from "dev" to "main")
-git checkout dev
-git pull origin dev
-git checkout main
-git merge dev
-git push origin main
+    [1]: Change directory
+    - Deactivate at "dev"
+    - Change at "bugfix"
+    - Activate at "main"
 
-    Merge [dev] to [main] formula:
-    (from "main" to "dev")
-git checkout main
-git pull origin main
-git checkout dev
-git merge main
-git push origin dev
+    [2]: ?
+    ?
 -->
 
 Linking:

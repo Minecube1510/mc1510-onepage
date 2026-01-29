@@ -44,15 +44,18 @@ const prefix_BKc_Ap = (keyCgh_AssetsPath[0].replace(
 /*
     Links
 */
-const path_Img_Category = ((jsFuncs).linkPathering_Lower([
+const path_Img_Category = jsFuncs.linkPathering_Lower([
     /*
      * [main]: Activate
      * [dev]: De-Activate
      */
-    ("mc1510-onepage"),
+    // ("mc1510-onepage"),
   /**/
   ("syswork"), ("assets"), ("index"), ("cgh"),
-]));
+]);
+const path_Img_TalenCon = jsFuncs.linkPathering_Basis([
+  //
+]);
 //
 const file_ImgBasis_Ctg = jsFuncs.declareFile_Basis(
   (valCgh_AssetsPath[0]), ("png"),
