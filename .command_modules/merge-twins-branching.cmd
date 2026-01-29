@@ -1,8 +1,9 @@
 @echo off
 :: #
-:: {File-Name} "merge-twins-branching.cmd"
-:: {File-Path} ".command_modules/merge-twins-branching.cmd"
-:: {Formatted} "cmd", ".cmd"
+:: {File-Name} "merge-twins-branching.ps1"
+:: {File-Path} ".command_modules/merge-twins-branching.ps1"
+:: {Formatted} ["ps1", ".ps1"]
+:: {Archived} ["cmd", ".cmd"], [""]
 :: |
 :: {Description Script}
 :: Merging Branch into Branch. Require two Branches.

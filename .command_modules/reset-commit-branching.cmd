@@ -1,8 +1,9 @@
 @echo off
 :: #
-:: {File-Name} "reset-commit-branching.cmd"
-:: {File-Path} ".command_modules/reset-commit-branching.cmd"
-:: {Formatted} "cmd", ".cmd"
+:: {File-Name} "reset-commit-branching.ps1"
+:: {File-Path} ".command_modules/reset-commit-branching.ps1"
+:: {Formatted} ["ps1", ".ps1"]
+:: {Archived} ["cmd", ".cmd"], [""]
 :: |
 :: {Description Script}
 :: Reset all Commits in Branch.
