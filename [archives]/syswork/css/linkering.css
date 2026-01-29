@@ -1,0 +1,33 @@
+/* linkering.css */
+
+.linker {
+    display: block;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    color: #0066cc;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.linker::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #0066cc;
+    transition: width 0.3s ease;
+}
+
+.linker:hover {
+    color: #ff4081;
+    transform: translateX(4px);
+}
+.linker:hover::after {
+    width: 100%;
+}
+
+.linker:active {
+    color: #e91e63;
+    transform: scale(0.95);
+}

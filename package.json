@@ -1,0 +1,28 @@
+{
+  "name": "mc1510-onepage",
+  "version": "1.0.0",
+  "description": "> *ID*: Hanya berisi **Project Web** yang merupakan satu halaman.<br>\r > *EN*: It only contains **Web Project** as a single page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./syswork/styles/imports/tailwind.input.css -o ./syswork/styles/imports/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./syswork/styles/imports/tailwind.input.css -o ./syswork/styles/imports/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minecube1510/mc1510-onepage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Minecube1510/mc1510-onepage/issues"
+  },
+  "homepage": "https://github.com/Minecube1510/mc1510-onepage#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "tailwindcss": "^4.1.18"
+  }
+}
