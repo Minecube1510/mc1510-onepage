@@ -1,0 +1,160 @@
+/*
+ *
+ * Name: "tailwind.input.css"
+ * Link: "syswork/styles/imports/tailwind.input.css"
+ *
+ */
+
+/* Setup Tailwind CSS */
+/* @reference "tailwindcss"; */
+/* @reference "tailwindcss/utilities"; */
+/***/
+@import "tailwindcss";
+/* @import "tailwindcss/preflight"; */
+/* @import "tailwindcss/utilities"; */
+/***/
+
+
+/* Importer Files (Up) */
+@import "../page-index.css";
+/*
+*
+*/
+@import "../index/page-cgh.css";
+/**/
+/* ? */
+/**/
+
+
+/* Tailwind Setup Customs */
+@layer base {
+  /**/
+
+  /*
+    || --- ~~!~~ --- ||
+    For "h" basics elements
+    || --- ~~!~~ --- ||
+  */
+  h1 { @apply text-4xl lg:text-4xl font-bold tracking-tight; }
+  h2 { @apply text-3xl lg:text-3xl font-semibold; }
+  h3 { @apply text-2xl lg:text-2xl font-semibold; }
+  h4 { @apply text-xl lg:text-xl font-medium; }
+  h5 { @apply text-lg lg:text-lg font-medium; }
+  h6 { @apply text-base lg:text-base font-medium; }
+  /*
+  *//*
+    || --- ~~!~~ --- ||
+    Basicalist
+    || --- ~~!~~ --- ||
+  */
+  .page-content {
+    @apply
+      min-h-screen
+
+      flex flex-col
+      justify-center items-center
+      h-full
+      ;
+    @apply
+      text-center
+      ;
+  }
+
+  /**/
+}
+@layer components {
+  /**/
+
+  /*
+    || --- ~~!~~ --- ||
+    Al-Whited and Al-Blacked
+    || --- ~~!~~ --- ||
+  */
+  /* White Full */
+  .altwin-bg-white { @apply bg-white; }
+  .altwin-text-white { @apply text-white; }
+  .altwin-border-white { @apply border-white; }
+  /* Black Full */
+  .altwin-bg-black { @apply bg-black; }
+  .altwin-text-black { @apply text-black; }
+  .altwin-border-black { @apply border-black; }
+  /*
+  *//*
+    || --- ~~!~~ --- ||
+    Bootstrap Settings
+    || --- ~~!~~ --- ||
+  */
+  /* Backgrounds */
+  .bs-bg-primary { @apply bg-blue-600; }
+  .bs-bg-secondary { @apply bg-gray-600; }
+  .bs-bg-success { @apply bg-green-600; }
+  .bs-bg-danger { @apply bg-red-600; }
+  .bs-bg-warning { @apply bg-yellow-400; }
+  .bs-bg-info { @apply bg-cyan-500; }
+  .bs-bg-light { @apply bg-gray-100; }
+  .bs-bg-dark { @apply bg-gray-900; }
+  /***/
+  /* Text colors */
+  .bs-text-primary { @apply text-blue-600; }
+  .bs-text-secondary { @apply text-gray-600; }
+  .bs-text-success { @apply text-green-600; }
+  .bs-text-danger { @apply text-red-600; }
+  .bs-text-warning { @apply text-yellow-500; }
+  .bs-text-info { @apply text-cyan-500; }
+  .bs-text-light { @apply text-gray-100; }
+  .bs-text-dark { @apply text-gray-900; }
+  /***/
+  /* Borders */
+  .bs-border-primary { @apply border-blue-600; }
+  .bs-border-secondary { @apply border-gray-600; }
+  .bs-border-success { @apply border-green-600; }
+  .bs-border-danger { @apply border-red-600; }
+  .bs-border-warning { @apply border-yellow-400; }
+  .bs-border-info { @apply border-cyan-500; }
+  .bs-border-light { @apply border-gray-200; }
+  .bs-border-dark { @apply border-gray-900; }
+
+  /*
+    || --- ~~!~~ --- ||
+    Paging Elements Customs
+    For "h" elements
+    || --- ~~!~~ --- ||
+  */
+  .paginged-h1,
+  .paginged-h1 h1 {
+    @apply select-none
+      mb-3
+      ;
+  }
+  .paginged-h2,
+  .paginged-h2 h2 {
+    @apply select-none
+      mb-2
+      ;
+  }
+  .paginged-h3,
+  .paginged-h3 h3 {
+    @apply select-none
+      mb-1
+      ;
+  }
+
+  /**/
+}
+@layer utilities {
+  /**/
+
+  /**/
+
+  /**/
+}
+
+
+/* Importer Files (Down) */
+/* @import "../page-index.css"; */
+/* @import "../index/page-cgh.css"; */
+/***/
+/**/
+
+
+/* * */
