@@ -25,6 +25,7 @@
     .
 
     Merge [main] to [dev] formula:
+    (from "dev" to "main")
 git checkout dev
 git pull origin dev
 git checkout main
@@ -32,6 +33,7 @@ git merge dev
 git push origin main
 
     Merge [dev] to [main] formula:
+    (from "main" to "dev")
 git checkout main
 git pull origin main
 git checkout dev
@@ -46,8 +48,17 @@ Linking:
 <!--
     Aturan:
 
-    Untuk "id" ataupun "name", atau indikasi di HTML...
+    [1]:
+    ``
+    Untuk "id" ataupun "name", atau indikasi di "HTML"
     WAJIB, LOWER-CASE (KECIL) SEMUANYA!
+    ``
+
+    [2]
+    ``
+    Untuk "main", WAJIB nambahin, nama repo-nya, pada
+    paling awal-awal ("mc1510-onepage")
+    ``
 -->
 
 ---
