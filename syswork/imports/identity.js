@@ -39,9 +39,9 @@ export const e_LinkTypes = Object.fromEntries(
  */
 // GitHub Info //
 const github_User = {
-  name: jsFuncs.jsProper("Minecube1510"),
-  repo: jsFuncs.jsLower("mc1510-onepage"),
-  path_assets: jsFuncs.linkPathering_Lower([
+  name: ((jsFuncs).jsProper("Minecube1510")),
+  repo: ((jsFuncs).jsLower("mc1510-onepage")),
+  path_assets: ((jsFuncs).linkPathering_Lower([
     /*
      * [main]: Activate
      * [dev]: De-Activate
@@ -49,24 +49,24 @@ const github_User = {
     ("mc1510-onepage"),
     /**/
     ("syswork"), ("assets"),
-  ]),
+  ])),
 };
-export const github_Data = Object.fromEntries(
-  Object.entries(github_User).map(([key, value]) => [
-    (key), ((jsFuncs).jsLower(value)),
+export const github_Data = (Object.fromEntries(
+  Object.entries(github_User).map(([
+    key, value]) => [(key),
+      ((jsFuncs).jsLower(value)),
   ]),
-);
+));
 
 /* Identic - Path */
-export const pathing_Assets = jsFuncs.linkPath_Begin_Lower([
+export const pathing_Assets = ((jsFuncs).linkPath_Begin_Lower([
   //(jsVars.varOne.Spot),
-  github_Data.path_assets,
-]);
+  (github_Data.path_assets),
+]));
 //* * *//
-export const pathFavicer = jsFuncs.linkPathering_Lower([
-  pathing_Assets,
-  "favics",
-]);
+export const pathFavicer = ((jsFuncs).linkPathering_Lower([
+  (pathing_Assets), (`favics`),
+]));
 /*
  *
  */
