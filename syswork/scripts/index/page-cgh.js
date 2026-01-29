@@ -49,7 +49,7 @@ const path_Img_Category = jsFuncs.linkPathering_Lower([
      * [main]: Activate
      * [dev]: De-Activate
      */
-    // ("mc1510-onepage"),
+    ("mc1510-onepage"),
   /**/
   ("syswork"), ("assets"), ("index"), ("cgh"),
 ]);
