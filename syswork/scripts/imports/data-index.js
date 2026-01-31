@@ -12,17 +12,29 @@ export const index_Data_Pl = [
         ("Comparasion of Gosei Tribes and Hololive ID"),
         ("cgh"),
     ],[
-        ("Projek 2 : Later"),
-        ("dua"),
+        ("Moekyu Gadget Devices (In-Progress : Fliphone)"),
+        ("mpp"),
     ],[
         ("Projek 3 : Later"),
-        //("tiga"),
+        ("tiga"),
     ],[
         ("Projek 4 : Later"),
-        //("empat"),
+        ("empat"),
     ],[
         ("Projek 5 : Later"),
-        //("lima"),
+        ("lima"),
+    ],[
+        ("Projek 6 : Later"),
+        //("enam"),
+    ],[
+        ("Projek 7 : Later"),
+        //("tujuh"),
+    ],[
+        ("Projek 8 : Later"),
+        //("delapan"),
+    ],[
+        ("Projek 9 : Later"),
+        //("delapan"),
     ],
 ];
 

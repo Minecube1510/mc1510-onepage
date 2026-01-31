@@ -118,9 +118,22 @@ export function declareFile_Lower(name, format) {
 }
 //
 export function textSentancer(arrays) {
+    const aliaser_Text = {
+        "\r\n": (`<br>`),
+        "\n": (`<br>`),
+        "\t": (`&emsp;`),
+    };
+    //
     return ((arrays)
-        .map((item) => (item))
-        .join(jsVars.varOne.Space));
+        .map((item) => {
+            let text = (String(item));
+            Object.entries(aliaser_Text).forEach(([
+                from, to
+            ]) => {
+                text = ((text).split(from).join(to));
+            });
+            return (text);
+    }).join(jsVars.varOne.Space));
 }
 export function sentanClasser(arrays) { 
     return jsLower((arrays)

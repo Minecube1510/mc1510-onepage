@@ -26,7 +26,9 @@ import * as cgh_CardData from
 
 
 /* Variable Sections */
-// One-Vars
+/*
+    One-Vars
+*/
 const cgh_VarMinus = (jsVars.varOne.Minus);
 const cgh_VarBlank = (jsVars.varOne.Blank);
 const cgh_VarSpace = (jsVars.varOne.Space);
@@ -35,6 +37,9 @@ const cgh_VarUscore = (jsVars.varOne.Uscore);
 //
 const blank_Data = cgh_VarMinus;
 //
+/*
+    Objecting
+*/
 const keyCgh_AssetsPath = Object.keys(cgh_BasisData.cgh_AssetsPath);
 const valCgh_AssetsPath = Object.values(cgh_BasisData.cgh_AssetsPath);
 //
@@ -44,7 +49,7 @@ const prefix_BKc_Ap = (keyCgh_AssetsPath[0].replace(
 /*
     Links
 */
-const path_Img_Category = jsFuncs.linkPathering_Lower([
+const path_Img_Category = ((jsFuncs).linkPathering_Lower([
     /*
      * [main]: Activate
      * [dev]: De-Activate
@@ -52,29 +57,25 @@ const path_Img_Category = jsFuncs.linkPathering_Lower([
     // ("mc1510-onepage"),
   /**/
   ("syswork"), ("assets"), ("index"), ("cgh"),
-]);
-const path_Img_TalenCon = jsFuncs.linkPathering_Basis([
-  //
-]);
+]));
 //
-const file_ImgBasis_Ctg = jsFuncs.declareFile_Basis(
+const file_ImgBasis_Ctg = ((jsFuncs).declareFile_Basis(
   (valCgh_AssetsPath[0]), ("png"),
-);
-const path_ImgBasis_Ctg = jsFuncs.linkPath_Begin_Basis([
-  path_Img_Category,
-  file_ImgBasis_Ctg,
-]);
+));
+const path_ImgBasis_Ctg = ((jsFuncs).linkPath_Begin_Basis([
+  path_Img_Category, file_ImgBasis_Ctg,
+]));
 //
-//console.log(prefix_BKc_Ap);
+//console.log(path_ImgBasis_Ctg);
 
 
 /* Data Table Display - Structing */
-const cgh_Table = jsFuncs.jsGetId("cgh-table");
-const cgh_tLabHead = jsFuncs.jsCreatE("th");
-const cgh_THeadRow = jsFuncs.jsCreatE("tr");
+const cgh_MainTable = ((jsFuncs).jsGetId("cgh-table"));
+const cgh_tLabHead = ((jsFuncs).jsCreatE("th"));
+const cgh_THeadRow = ((jsFuncs).jsCreatE("tr"));
 //
-cgh_Table.classList.add("cgh-table");
-cgh_tLabHead.classList.add("cgh-th");
+(cgh_MainTable).classList.add("cgh-table");
+(cgh_tLabHead).classList.add("cgh-th");
 //
 const size_CghCtg = (150);
 function cghDraw_Attributter(attributer = []) {
@@ -88,10 +89,10 @@ function cghDraw_Attributter(attributer = []) {
 function cghDraw_Elm_Categ(element,
   attrArr = [], contentStr = cgh_VarBlank,
 ) {
-  const draw_Elm = jsFuncs.textSentancer([
-    jsFuncs.jsLower(element),
-    cghDraw_Attributter(attrArr),
-  ]);
+  const draw_Elm = ((jsFuncs).textSentancer([
+    ((jsFuncs).jsLower(element)),
+    (cghDraw_Attributter(attrArr)),
+  ]));
   const struct_Elm = ([
     (`<${draw_Elm}>`), (`${contentStr}`),
     (`</${jsFuncs.jsLower(element)}>`),
@@ -106,7 +107,7 @@ const cgh_Linking = ((jsFuncs).linker_WebServe([
   ((jsFuncs).js_UcWords("hololive")),
 ], ("https")));
 //
-cgh_tLabHead.innerHTML = (cghDraw_Elm_Categ(("a"), [
+(cgh_tLabHead).innerHTML = (cghDraw_Elm_Categ(("a"), [
     ("class:cgh-tabtog"), (`href:${cgh_Linking}`),
   ], (cghDraw_Elm_Categ(("img"), [
   ("id:"), ("name:"), (`title:${basis_FirstMark}`),
@@ -115,58 +116,60 @@ cgh_tLabHead.innerHTML = (cghDraw_Elm_Categ(("a"), [
   ("draggable:false"),
 ]))));
 //
-// Headering (Ctg) //
+/*
+    Headering (Ctg)
+*/
 cgh_THeadRow.appendChild(cgh_tLabHead);
-cgh_Table.appendChild(cgh_THeadRow);
+cgh_MainTable.appendChild(cgh_THeadRow);
 //
-// Helper Drawing //
-//
+
 
 /* Data Table Display - Data */
 cgh_BasisData.cgh_Gen.forEach((cgh_TabTalent, cgh_TIndex) => {
-  const cgh_THeading = jsFuncs.jsCreatE("th");
+  const cgh_THeading = ((jsFuncs).jsCreatE("th"));
   const head1_Decorate = ((jsFuncs).sentanClasser([
     ("bs-text-secondary"),
   ]));
   //
   const auto_IdGen = ((cgh_TIndex) + (1));
   const navi_Gen = ((jsFuncs).js_UcWords([
-    `Hololive Indonesia - Generasi ${auto_IdGen}`
+    (`Hololive Indonesia - Generasi ${auto_IdGen}`),
   ]))
   //
-  cgh_THeading.classList.add("cgh-th");
-  cgh_THeading.innerHTML = cghDraw_Elm_Categ(
-    "h1",
-    [`title:${navi_Gen}`, `class:${head1_Decorate}`],
-    cgh_TabTalent,
-  );
+  cgh_THeading.classList.add(("cgh-th"));
+  (cgh_THeading).innerHTML = (cghDraw_Elm_Categ(("h1"), [
+    (`id:`), (`name:`), (`title:${navi_Gen}`),
+    (`class:${head1_Decorate}`),
+  ], (cgh_TabTalent)));
   //
-  cgh_THeadRow.appendChild(cgh_THeading);
+  (cgh_THeadRow).appendChild(cgh_THeading);
 });
-Object.entries((cgh_BasisData).cgh_AssetsPath).slice(1)
-  .forEach(([cgh_Mark, cgh_Link]) => {
+Object.entries((cgh_BasisData).cgh_AssetsPath)
+  .slice(1).forEach(([cgh_Mark, cgh_Link]) => {
     // Penyiapan //
     const cgh_TrBody = jsFuncs.jsCreatE("tr");
     cgh_TrBody.classList.add("cgh-tr");
-
+    //
     // Satu Icon - Penandaan //
-    const td = document.createElement("td");
+    const cgh_Td_talentId = ((jsFuncs).jsCreatE("td"));
     //
-    const iconMark_Class = [("cgh-td"),
-      ("px-5"),
-    ]
-    td.classList.add(...iconMark_Class);
+    const iconMark_Class = [
+      ("cgh-td"), ("px-5"),
+    ];
+    (cgh_Td_talentId).classList.add(...iconMark_Class);
     //
-    const id_TalentKey = cgh_BasisData.cgh_DefMapPath[cgh_Mark];
+    const id_TalentKey = (cgh_BasisData.cgh_DefMapPath[cgh_Mark]);
     //
-    const fileImg_Ctg = jsFuncs.declareFile_Basis(cgh_Link, "png");
-    const pathImg_Ctg = jsFuncs.linkPath_Begin_Basis([
-      path_Img_Category, fileImg_Ctg,
-    ]);
+    const fileImg_Ctg = ((jsFuncs).declareFile_Basis((cgh_Link), ("png")));
+    const pathImg_Ctg = ((jsFuncs).linkPath_Begin_Basis([
+      (path_Img_Category), (fileImg_Ctg),
+    ]));
     const get_TitleCtg = (cgh_BasisData.cgh_DefMapPath[cgh_Mark]);
     const show_titleCtg = ((jsFuncs).js_UcWords(get_TitleCtg));
     //
-    td.innerHTML = ([
+    const title_Gosei = (`Tribes that in Goseiger, Super Sentai series`);
+    //
+    (cgh_Td_talentId).innerHTML = ([
       (cghDraw_Elm_Categ("img", [("id:"), ("name:"),
         (`width:${size_CghCtg}`), (`height:${size_CghCtg}`),
         (`alt:${cgh_Mark.replace(cgh_VarUscore, cgh_VarSpace)}`),
@@ -175,11 +178,11 @@ Object.entries((cgh_BasisData).cgh_AssetsPath).slice(1)
       ])),
       (cghDraw_Elm_Categ(("h2"), [("id:"), ("name:"),
         (`class:bs-text-secondary opacity-25`),
-        ("title:Tribes that in Goseiger, Super Sentai series"),
+        (`title:${title_Gosei}`),
       ], (show_titleCtg))),
     ].join(cgh_VarBlank));
     //
-    cgh_TrBody.appendChild(td);
+    cgh_TrBody.appendChild(cgh_Td_talentId);
 
     // Satu Icon - Perdataan //
     cgh_BasisData.cgh_Gen.forEach((id_gen) => {
@@ -195,16 +198,15 @@ Object.entries((cgh_BasisData).cgh_AssetsPath).slice(1)
       const size_CghTalent = ((25) * (5));
       //
       if (check_isDataBade) {
-        const size_roundBorder = ((4) ** (2));
+        //const size_roundBorder = ((4) ** (2));
         //
         const div_Classer = ((jsFuncs).textSentancer([
           (`inline-flex`), (`items-center`), (`justify-center`),
-          (`cgh-stain-bg-${data_Talent.Color}`), (`mb-2`), (`p-2`),
+          (`cgh-stain-${data_Talent.Color}-b`), (`mb-2`), (`p-2`),
           (`rounded-lg`), (`overflow-hidden`),
         ]));
         const btn_Classer = ((jsFuncs).textSentancer([
-          (`cgh-tabtog`),
-          (`p-0`),
+          (`cgh-tabtog`), (`cgh-show-card`), (`p-0`),
         ]));
         const img_Classer = ((jsFuncs).textSentancer([(`block`),
           (`w-[${size_CghTalent}px] h-[${size_CghTalent}px]`),
@@ -212,21 +214,28 @@ Object.entries((cgh_BasisData).cgh_AssetsPath).slice(1)
         //
         const h3_Classer = ((jsFuncs).textSentancer([
           (`cgh-h3`), (`cgh-textog`),
-          (`cgh-stain-text-${data_Talent.Color}`),
+          (`cgh-stain-${data_Talent.Color}-a`),
         ]));
         //
         (tdGen).innerHTML = ([
           (cghDraw_Elm_Categ(("div"), [("id:"), ("name:"),
             (`class:${div_Classer}`),
-          ], [(cghDraw_Elm_Categ(("button"), [("type:button"),
-            ("id:"), ("name:"), (`class:${btn_Classer}`),
-            ("aria-expanded:false"),
-          ], (cghDraw_Elm_Categ(("img"), [
-            ("id:"), ("name:"), (`class:${img_Classer}`),
-            (`title:${data_Talent.Title}`), (`draggable:false`),
-            (`width:${size_CghTalent}`), (`height:${size_CghTalent}`),
-            (`alt:${data_Talent.Alt}`), (`src:${data_Talent.Src}`),
-          ]))))].join(cgh_VarBlank))),
+          ], [
+              (cghDraw_Elm_Categ(("button"), [("type:button"),
+              ("id:"), ("name:"), (`class:${btn_Classer}`),
+              //
+              (`data-id:${data_Talent.Color}`),
+              (`data-name:${data_Talent.Name}`),
+              (`data-rank:${data_Talent.Rank}`),
+              //
+              ("aria-expanded:false"),
+            ], (cghDraw_Elm_Categ(("img"), [
+              ("id:"), ("name:"), (`class:${img_Classer}`),
+              (`title:${data_Talent.Title}`), (`draggable:false`),
+              (`width:${size_CghTalent}`), (`height:${size_CghTalent}`),
+              (`alt:${data_Talent.Alt}`), (`src:${data_Talent.Src}`),
+            ]))))
+          ].join(cgh_VarBlank))),
           (cghDraw_Elm_Categ(("a"), [(`draggable:false`),
               ("id:"), ("name:"),
               (`class:mt-2 cgh-tabtog group`),
@@ -244,14 +253,186 @@ Object.entries((cgh_BasisData).cgh_AssetsPath).slice(1)
       cgh_TrBody.appendChild(tdGen);
     });
 
-    cgh_Table.appendChild(cgh_TrBody);
+    cgh_MainTable.appendChild(cgh_TrBody);
   }
 );
 //
 
 
-/* Uji Coba */
+/* Showing Cards */
+function img_AuTemping(link_now, link_fix) {
+  if (typeof link_now !== "string" || !link_now.trim()) {
+    return link_fix;
+  }
+  // kalau sudah absolute URL → pakai langsung
+  if (/^https?:\/\//i.test(link_now)) {
+    return link_now;
+  }
+  // kalau fallback juga path lokal → return langsung
+  if (link_fix.startsWith("/")) {
+    return link_fix;
+  }
+  // gabungkan relative ke base absolute
+  return new URL(link_now, link_fix).href;
+}
 //
+function setOpen_CardStain(
+  el, stainId,
+) {
+  // buang semua stain lama
+  [...el.classList].forEach(cls => {
+    if (
+      cls.startsWith("cgh-stain-") ||
+      cls.startsWith("bg-") ||
+      cls.startsWith("border-")
+    ) {
+      el.classList.remove(cls);
+    }
+  });
+  // kalau gak ada stain → default
+  if (!stainId) {
+    el.classList.add(
+      ("bg-zinc-400"),
+      ("border-neutral-600"),
+    );
+    return;
+  }
+  // pasang stain baru
+  const staining_A = (`var(--cgh-${stainId}-a)`);
+  const staining_B = (`var(--cgh-${stainId}-b)`);
+  //
+  el.style.setProperty(("--card-bg"), (staining_B));
+  el.style.setProperty(("--card-border"), (staining_A));
+}
+function setClose_CardStain(overlay, card) {
+  overlay.classList.remove("active");
+  // RESET STAIN
+  setOpen_CardStain(card, null);
+  // optional: bersihin konten
+  card.innerHTML = cgh_VarBlank;
+}
+//
+(document).addEventListener(("click"), ((e) => {
+  const cgh_BtnOpenCard = e.target.closest(".cgh-show-card");
+  //
+  const cgh_CardOverlay = jsFuncs.jsGetId("cgh-card-overlay");
+  const cgh_CardContent = jsFuncs.jsGetId("cgh-main-card");
+  //
+  const cardImg_Basis = path_ImgBasis_Ctg;
+  //
+  if (e.target.closest(".cgh-card-close")) {
+    cgh_CardOverlay.classList.remove("active");
+    return;
+  }
+  if (!cgh_BtnOpenCard) {
+    //console.warn(``);
+    return;
+  } else {
+    //
+  }
+  const cgh_Key_aIdi = cgh_BtnOpenCard.dataset.id;
+  const cgh_Key_Name = cgh_BtnOpenCard.dataset.name;
+  const cgh_Key_Rank = cgh_BtnOpenCard.dataset.rank;
+  //
+  //console.log("");
+  //console.log(cgh_CardData.id_TalentIndex);
+    //
+  //console.log("");
+  //console.log("[GET] id:", cgh_Key_aIdi);
+  //console.log("[GET] name:", cgh_Key_Name);
+  //console.log("[GET] rank:", cgh_Key_Rank);
+  //
+  const [ctgKey, indexStr] = ((cgh_Key_aIdi)
+    .split(cgh_VarMinus));
+  const get_RoleName = ((cgh_CardData).id_TalentIndex[ctgKey]);
+  const get_DataKey = (`${get_RoleName}_${indexStr}`);
+  const cghGet_Data = (((cgh_CardData)
+    .cgh_DataCarding[get_DataKey]) ?? {});
+  //
+  const {
+    Name: name_talent,
+    Desc: desc_talent,
+    Pict: pict_talent,
+    //
+    Code: code_talent,
+    //X: ,
+  } = (cghGet_Data) ?? {};
+  //
+  //console.log("");
+  //console.log("[CHECK] Name:", name_talent);
+  //console.log("[CHECK] Desc:", desc_talent);
+  //console.log("[CHECK] Pict:", pict_talent);
+  //
+  const safety_CghName = typeof
+    name_talent === "string" && name_talent.trim() !== cgh_VarBlank
+    ? name_talent :
+    `Err: Unknown Talent Name`;
+  const safety_CghDesc = typeof
+    desc_talent === "string" && desc_talent.trim() !== cgh_VarBlank
+    ? desc_talent : jsFuncs.textSentancer([
+      `Err:\n`,
+      `Missing to showed, at the Description...`,
+    ]);
+  //
+  const safety_CghPict = (encodeURI(
+    img_AuTemping(pict_talent, cardImg_Basis)));
+  //console.log(safety_CghPict);
+  //
+  setOpen_CardStain(cgh_CardContent, code_talent);
+  cgh_CardContent.innerHTML = [
+    //
+    cghDraw_Elm_Categ("img", [
+      // Pict (Ini masalah-nya)
+      `draggable:false`,
+      `class:cgh-card-pict`,
+      `src:${safety_CghPict}`,
+    ], ""),
+    //
+    cghDraw_Elm_Categ("button", [`type:button`,
+      `class:cgh-card-close`,
+      `aria-label:Close card`
+    ], `✕`),
+    cghDraw_Elm_Categ("h1", [  // Name
+      `class:cgh-card-name`,
+    ], `${safety_CghName}`),
+    cghDraw_Elm_Categ("p", [  // Desc
+      `class:cgh-card-desc`,
+    ], `${safety_CghDesc}`),
+  ].join(cgh_VarBlank);
+  cgh_CardOverlay.classList.add("active");
+  //
+  if (e.target.closest(".cgh-card-close")) {
+    setClose_CardStain(cgh_CardOverlay, cgh_CardContent);
+    return;
+  }
+}));
+
+
+/* Uji Coba */
+function checkData_IdTalent_DecoLog() {
+  console.group("Check Talent");
+    Object.entries(cgh_BasisData.cgh_TabTalent)
+    .forEach(([areaKey, talents]) => {
+      console.group(`Gen: ${areaKey}`);
+      console.log("Raw area data:", talents);
+
+      Object.entries(talents).forEach(([
+        talentKey, talentData,
+      ]) => {
+        console.group(`Talent: ${talentKey}`);
+        console.log("Details:", talentData);
+        console.groupEnd();
+      });
+      console.groupEnd();
+    });
+  console.groupEnd();
+}
+function checkData_IdTalent_Json() {
+  console.log(cgh_BasisData.cgh_TabTalent);
+}
+/* * */
+//checkData_IdTalent_DecoLog();
+//checkData_IdTalent_Json();
 
 
 // !-! //

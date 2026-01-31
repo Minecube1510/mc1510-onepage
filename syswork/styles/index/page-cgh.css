@@ -10,10 +10,87 @@
 /***/
 /*?*/
 
+
 /* Customizes */
 @layer base {
   /**/
 
+  /*
+    || --- ~~!~~ --- ||
+    Rooting
+    || --- ~~!~~ --- ||
+  */
+  :root {
+    --cgh-sky-1-a: theme(colors.violet.400);
+    --cgh-sky-1-b: theme(colors.purple.400);
+    /**/
+    --cgh-sea-1-a: theme(colors.lime.500);
+    --cgh-sea-1-b: theme(colors.green.500);
+    /**/
+    --cgh-land-1-a: theme(colors.pink.400);
+    --cgh-land-1-b: theme(colors.rose.400);
+    /* *
+    * */
+    --cgh-sky-2-a: theme(colors.indigo.700);
+    --cgh-sky-2-b: theme(colors.blue.700);
+    /**/
+    --cgh-sea-2-a: theme(colors.rose.700);
+    --cgh-sea-2-b: theme(colors.pink.700);
+    /**/
+    --cgh-land-2-a: theme(colors.yellow.400);
+    --cgh-land-2-b: theme(colors.amber.400);
+    /* *
+    * */
+    --cgh-sky-3-a: theme(colors.gray.400);
+    --cgh-sky-3-b: theme(colors.slate.400);
+    /**/
+    --cgh-sea-3-a: theme(colors.indigo.900);
+    --cgh-sea-3-b: theme(colors.purple.900);
+    /**/
+    --cgh-land-3-a: theme(colors.red.500);
+    --cgh-land-3-b: theme(colors.rose.500);
+  }
+  /**/
+  .cgh-only-check-colors {
+    @apply
+      text-violet-400
+      bg-purple-400
+      ;
+    @apply
+      text-lime-500
+      bg-green-500
+      ;
+    @apply
+      text-pink-400
+      bg-rose-400
+      ;
+    /**/
+    @apply
+      text-indigo-700
+      bg-blue-700
+      ;
+    @apply
+      text-rose-700
+      bg-pink-700
+      ;
+    @apply
+      text-yellow-400
+      bg-amber-400
+      ;
+    /**/
+    @apply
+      text-gray-400
+      bg-slate-400
+      ;
+    @apply
+      text-indigo-900
+      bg-purple-900
+      ;
+    @apply
+      text-red-500
+      bg-rose-500
+      ;
+  }
   /**/
 
   /**/
@@ -27,12 +104,13 @@
     || --- ~~!~~ --- ||
   */
   .cgh-title {
-    @apply
-        transition-all duration-150 ease-out
+    @apply transition-all
+      ease-out
+      duration-150
     ;
     @apply
-        hover:scale-[1.15]
-        active:scale-[0.95]
+      hover:scale-[1.15]
+      active:scale-[0.95]
     ;
   }
   .cgh-h3 {
@@ -61,6 +139,9 @@
       /* ? */
       ;
   }
+  .cgh-table tr:not(:first-child) > :first-child {
+    @apply border-y-0;
+  }
   /**/
   .cgh-th {
     @apply text-center
@@ -75,15 +156,35 @@
     border-slate-300
     bg-slate-100
       ;
+    @apply transition-all
+      ease-out
+      duration-100
+      ;
   }
+  .cgh-th:first-child {
+    @apply border;
+  }
+  .cgh-th:not(:first-child) {
+    @apply border-x-0;
+  }
+  /**/
   .cgh-tr {
     @apply text-center
-      /* ? */
+      transition
+      ease-out
       ;
-    @apply transition
+    @apply 
+      duration-100
     hover:bg-slate-50
       ;
   }
+  .cgh-tr:first-child {
+    @apply border;
+  }
+  .cgh-tr:not(:first-child) {
+    @apply border-y-0;
+  }
+  /**/
   .cgh-td {
     @apply text-center
       align-middle
@@ -110,6 +211,12 @@
       lg:font-semibold
       font-bold
       ;
+  }
+  .cgh-td:first-child {
+    @apply border;
+  }
+  .cgh-td:not(:first-child) {
+    @apply border-0;
   }
   /*
   */ /*
@@ -161,6 +268,7 @@
   .cgh-tabtog h3 {
     @apply cursor-pointer;
   }
+  /**/
   .cgh-textog {
     @apply font-semibold
       group-active:font-normal
@@ -169,6 +277,113 @@
   .cgh-textog h3 {
     @apply
       font-bold
+      ;
+  }
+  /*
+  */ /*
+    || --- ~~!~~ --- ||
+    Card Displaying
+    || --- ~~!~~ --- ||
+  */
+  .cgh-overlay {
+    @apply fixed
+      flex items-center justify-center
+      pointer-events-none
+      ;
+    @apply opacity-0
+      inset-0 z-50
+      bg-black/60
+      ;
+    @apply transition-opacity
+      duration-300
+      ;
+  }
+  .cgh-overlay.active {
+    @apply opacity-100
+      pointer-events-auto
+      ;
+  }
+  .cgh-card-content {
+    @apply relative
+      w-full max-w-md
+      ;
+    @apply shadow-xl p-6
+      h-[550px]
+      rounded-2xl
+      ;
+    @apply border-4
+      border-solid
+      /**/
+      /* 
+        bg-zinc-400
+        border-neutral-600
+      */
+      ;
+    @apply transform ease-out
+      translate-y-full opacity-0
+      transition-all duration-300
+      ;
+    /* * */
+    background-color: var(--card-bg, theme(colors.zinc.400));
+    border-color: var(--card-border, theme(colors.neutral.600));
+  }
+  .cgh-overlay.active .cgh-card-content {
+    @apply translate-y-0
+      opacity-100
+      ;
+  }
+  /***/
+  .cgh-card-close {
+    @apply absolute
+      cursor-pointer
+      transition-opacity
+      ;
+    @apply text-xl
+      opacity-70
+      text-white
+      ;
+    @apply 
+      top-3
+      right-3
+      ;
+  }
+  .cgh-card-close:hover {
+    @apply opacity-100
+    ;
+  }
+  .cgh-card-close:active {
+    @apply opacity-100
+    ;
+  }
+  /***/
+  .cgh-card-name {
+    @apply text-center
+      text-white
+      ;
+    @apply
+      mt-3
+      mb-2
+      ;
+  }
+  .cgh-card-pict {
+    @apply rounded-lg
+      mx-auto text-white
+      ;
+    @apply
+      my-3
+      ;
+    @apply
+      w-40
+      /**/
+      h-40
+      ;
+  }
+  .cgh-card-desc {
+    @apply text-start
+      italic text-white
+      ;
+    @apply mx-3
+      mt-2 mb-3
       ;
   }
   /***/
@@ -190,70 +405,68 @@
     Talent Color Code
     || --- ~~!~~ --- ||
   */
-  .cgh-stain-text-sky-1 {
+  .cgh-stain-sky-1-a {
     @apply text-purple-400;
   }
-  .cgh-stain-bg-sky-1 {
+  .cgh-stain-sky-1-b {
     @apply bg-violet-400;
   }
   /**/
-  .cgh-stain-text-sea-1 {
+  .cgh-stain-sea-1-a {
     @apply text-lime-500;
   }
-  .cgh-stain-bg-sea-1 {
+  .cgh-stain-sea-1-b {
     @apply bg-green-500;
   }
   /**/
-  .cgh-stain-text-land-1 {
+  .cgh-stain-land-1-a {
     @apply text-pink-400;
   }
-  .cgh-stain-bg-land-1 {
+  .cgh-stain-land-1-b {
     @apply bg-rose-400;
   }
-  /*
-   *
-   */
-  .cgh-stain-text-sky-2 {
+  /* *
+  * */
+  .cgh-stain-sky-2-a {
     @apply text-indigo-700;
   }
-  .cgh-stain-bg-sky-2 {
+  .cgh-stain-sky-2-b {
     @apply bg-blue-700;
   }
   /**/
-  .cgh-stain-text-sea-2 {
+  .cgh-stain-sea-2-a {
     @apply text-rose-700;
   }
-  .cgh-stain-bg-sea-2 {
+  .cgh-stain-sea-2-b {
     @apply bg-pink-700;
   }
   /**/
-  .cgh-stain-text-land-2 {
+  .cgh-stain-land-2-a {
     @apply text-yellow-400;
   }
-  .cgh-stain-bg-land-2 {
+  .cgh-stain-land-2-b {
     @apply bg-amber-400;
   }
-  /*
-   *
-   */
-  .cgh-stain-text-sky-3 {
+  /* *
+  * */
+  .cgh-stain-sky-3-a {
     @apply text-gray-400;
   }
-  .cgh-stain-bg-sky-3 {
+  .cgh-stain-sky-3-b {
     @apply bg-slate-400;
   }
   /**/
-  .cgh-stain-text-sea-3 {
+  .cgh-stain-sea-3-a {
     @apply text-indigo-900;
   }
-  .cgh-stain-bg-sea-3 {
+  .cgh-stain-sea-3-b {
     @apply bg-purple-900;
   }
   /**/
-  .cgh-stain-text-land-3 {
+  .cgh-stain-land-3-a {
     @apply text-red-500;
   }
-  .cgh-stain-bg-land-3 {
+  .cgh-stain-land-3-b {
     @apply bg-rose-500;
   }
   /**/
@@ -261,5 +474,6 @@
   /**/
 }
 /***/
+
 
 /* * */

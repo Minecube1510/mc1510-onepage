@@ -30,7 +30,7 @@ export const cgh_Ctg = [
     ("Landick"),
 ];
 export const cgh_Gen = [
-    ("Area-15"),
+    ("Area15"),
     ("holoro"),
     ("Holoh3ro"),
 ];
@@ -100,16 +100,16 @@ export const static_Talent_Linker = ((jsFuncs).linkPathering_Lower([
 ]));
 //
 function cghStruct_Talent(
-    Name, Title, Alt,
+    Name, Rank, Title, Alt,
     Href = [], Src = [],
-    Color = "f0f0f0", Desc = "",
+    Color = "f0f0fafa", Desc = "",
 ) {
     const cgh_ProperName = ((jsFuncs).js_UcWords(Name));
     const cgh_ProperTitle = ((jsFuncs).js_UcWords(Title));
     const cgh_ProperAlt = ((jsFuncs).js_UcWords(Alt));
     //
     const cgh_ProperColor = ((jsFuncs).jsLower(Color));
-    const cgh_ProperDesc = ((jsFuncs).js_UcWords(Desc));
+    //const cgh_ProperDesc = ((jsFuncs).js_UcWords(Desc));
     //
     const check_Arr = ((readArr) => {
         return ((Array.isArray(readArr))
@@ -124,6 +124,8 @@ function cghStruct_Talent(
 
     return {
         Name: cgh_ProperName,
+        Rank: Rank,
+        //
         Title: cgh_ProperTitle,
         Alt: cgh_ProperAlt,
         //
@@ -176,14 +178,15 @@ function cghImg_Alting(context, point) {
 }
 //
 function cgh_Compress_IndoTalent(
-    Name, Title, Alt, FTicket,
-    Color = "F0f0f0", Desc,
+    Name, Rank,
+    Title, Alt, FTicket,
+    Color = "F0F0FAFA", Desc,
     Href = null, Src = null,
 ) {
     //
     //
     return (cghStruct_Talent(
-        (Name), (Title), (Alt),
+        (Name), (Rank), (Title), (Alt),
         ((Href) ?? (cghImg_Talent_Link(Name))),
         ((Src) ?? (cghImg_Fandom_SrcIng(((FTicket)
             ?? (jsVars.varOne.Blank)),
@@ -206,20 +209,23 @@ export const cgh_TabTalent = {
         - [Src] : "Link Sumber" (img)
     */
     Area15: {
-        Skick: cgh_Compress_IndoTalent((id_Talent.Skick_1),
+        Skick: cgh_Compress_IndoTalent(
+            (id_Talent.Skick_1), (cgh_Gen[(1)-(1)]),
             (`Skick of Area 15`), (cghImg_Alting(
                 (`Gekkou of Moonlight`), (pickWord(
                 (id_Talent.Skick_1), (1))
             ))), (`4/41`), ("sky-1"),
             ("Bulan Tukang Makan"),
         ),
-        Seaick: cgh_Compress_IndoTalent((id_Talent.Seaick_1),
+        Seaick: cgh_Compress_IndoTalent(
+            (id_Talent.Seaick_1), (cgh_Gen[(1)-(1)]),
             (`Seaick of Area 15`), (cghImg_Alting(
                 (`Suisou of Aquarium`), (`Yopi`),
             )), (`6/6e`), ("sea-1"),
             ("Yopipi BOGEL RRRRRR"),
         ),
-        Landick: cgh_Compress_IndoTalent((id_Talent.Landick_1),
+        Landick: cgh_Compress_IndoTalent(
+            (id_Talent.Landick_1), (cgh_Gen[(1)-(1)]),
             (`Landick of Area 15`), (cghImg_Alting(
                 (`Shinzen of Natures`), (pickWord(
                 (id_Talent.Landick_1), (2))
@@ -228,21 +234,24 @@ export const cgh_TabTalent = {
         ),
     },
     holoro: {
-        Skick: cgh_Compress_IndoTalent((id_Talent.Skick_2),
+        Skick: cgh_Compress_IndoTalent(
+            (id_Talent.Skick_2), (cgh_Gen[(2)-(1)]),
             (`Skick of holoro`), (cghImg_Alting(
                 (`Toppuu of Windgusts`), (pickWord(
                 (id_Talent.Skick_2), (2))
             ))), (`3/34`), ("sky-2"),
             ("Tante Antagonis, sukanya ANJING"),
         ),
-        Seaick: cgh_Compress_IndoTalent((id_Talent.Seaick_2),
+        Seaick: cgh_Compress_IndoTalent(
+            (id_Talent.Seaick_2), (cgh_Gen[(2)-(1)]),
             (`Seaick of holoro`), (cghImg_Alting(
                 (`Sekketsu of Bloody`), (pickWord(
                 (id_Talent.Seaick_2), (2))
             ))), (`3/3d`), ("sea-2"),
             ("Kawanannya melebihi dari namanya"),
         ),
-        Landick: cgh_Compress_IndoTalent((id_Talent.Landick_2),
+        Landick: cgh_Compress_IndoTalent(
+            (id_Talent.Landick_2), (cgh_Gen[(2)-(1)]),
             (`Landick of holoro`), (cghImg_Alting(
                 (`Eiken of Sharpblade`), (pickWord(
                 (id_Talent.Landick_2), (1))
@@ -251,21 +260,24 @@ export const cgh_TabTalent = {
         ),
     },
     Holoh3ro: {
-        Skick: cgh_Compress_IndoTalent((id_Talent.Skick_3),
+        Skick: cgh_Compress_IndoTalent(
+            (id_Talent.Skick_3), (cgh_Gen[(3)-(1)]),
             (`Skick of Holoh3ro`), (cghImg_Alting(
                 (`Kanja of Spy`), (pickWord(
                 (id_Talent.Skick_3), (2))
             ))), (`2/21`), ("sky-3"),
             ("A a a, Mission Stato! Iya iya, suka-suka, PON!"),
         ),
-        Seaick: cgh_Compress_IndoTalent((id_Talent.Seaick_3),
+        Seaick: cgh_Compress_IndoTalent(
+            (id_Talent.Seaick_3), (cgh_Gen[(3)-(1)]),
             (`Seaick of Holoh3ro`), (cghImg_Alting(
                 (`Amagumo of Raincloud`), (pickWord(
                 (id_Talent.Seaick_3), (1))
             ))), (`7/7f`), ("sea-3"),
             ("Kobocil EHEK-EHEK!"),
         ),
-        Landick: cgh_Compress_IndoTalent((id_Talent.Landick_3),
+        Landick: cgh_Compress_IndoTalent(
+            (id_Talent.Landick_3), (cgh_Gen[(3)-(1)]),
             (`Landick of Holoh3ro`), (cghImg_Alting(
                 (`Tanzou of Forging`), (pickWord(
                 (id_Talent.Landick_3), (1))
@@ -275,9 +287,6 @@ export const cgh_TabTalent = {
     }
 };
 //
-export const cgh_CardReasons = {
-    //
-}
 
 
 // !-! //
