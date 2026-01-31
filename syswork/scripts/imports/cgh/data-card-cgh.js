@@ -54,9 +54,9 @@ const cgh_DescReason = [
     (`Zombi Indonesia`),
     (`Keris Indonesia`),
     //
-    (`Agent Indonesia`),
+    (`Intel Indonesia`),
     (`Hujan Indonesia`),
-    (`GeeSH Indonesia`),
+    (`Godam Indonesia`),
 ];
 export const cgh_DataCarding = (Object.fromEntries(
     Object.entries(cgh_GettaData).map(
@@ -66,8 +66,16 @@ export const cgh_DataCarding = (Object.fromEntries(
             Name: val.Name,
             Pict: val.Src,
             //
-            Desc: cgh_DescReason[i]
+            Desc: cgh_DescReason[i],
             //Desc: cgh_DescReason[i] ? [cgh_DescReason[i]] : [],
+            //
+            Link: val.Href,
+            /* *
+            * */
+            Text_Alter: val.Alt,
+            Text_Quote: val.Desc,
+            Text_Title: val.Title,
+            //
     }])
 ));
 
@@ -77,7 +85,7 @@ export const cgh_DataCarding = (Object.fromEntries(
 
 /* Uji Coba */
 //console.log(id_TalentIndex);
-console.log(cgh_DataCarding);
+//console.log(cgh_DataCarding);
 //* * *//
 //
 

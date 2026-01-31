@@ -102,7 +102,8 @@ export const static_Talent_Linker = ((jsFuncs).linkPathering_Lower([
 function cghStruct_Talent(
     Name, Rank, Title, Alt,
     Href = [], Src = [],
-    Color = "f0f0fafa", Desc = "",
+    Color = "f0f0fafa",
+    Desc = jsVars.varOne.Blank,
 ) {
     const cgh_ProperName = ((jsFuncs).js_UcWords(Name));
     const cgh_ProperTitle = ((jsFuncs).js_UcWords(Title));
@@ -286,6 +287,11 @@ export const cgh_TabTalent = {
         ),
     }
 };
+//
+
+
+/* Uji Coba */
+//console.log(cgh_TabTalent);
 //
 
 

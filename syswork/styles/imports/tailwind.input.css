@@ -17,10 +17,11 @@
 
 /* Importer Files (Up) */
 @import "../page-index.css";
-/*
-*
-*/
+/* *
+* */
 @import "../index/page-cgh.css";
+/**/
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 /**/
 /* ? */
 /**/

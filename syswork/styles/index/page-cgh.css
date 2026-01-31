@@ -21,7 +21,7 @@
     || --- ~~!~~ --- ||
   */
   :root {
-    --cgh-sky-1-a: theme(colors.violet.400);
+    --cgh-sky-1-a: theme(colors.violet.300);
     --cgh-sky-1-b: theme(colors.purple.400);
     /**/
     --cgh-sea-1-a: theme(colors.lime.500);
@@ -42,12 +42,12 @@
     /* *
     * */
     --cgh-sky-3-a: theme(colors.gray.400);
-    --cgh-sky-3-b: theme(colors.slate.400);
+    --cgh-sky-3-b: theme(colors.slate.500);
     /**/
     --cgh-sea-3-a: theme(colors.indigo.900);
     --cgh-sea-3-b: theme(colors.purple.900);
     /**/
-    --cgh-land-3-a: theme(colors.red.500);
+    --cgh-land-3-a: theme(colors.red.600);
     --cgh-land-3-b: theme(colors.rose.500);
   }
   /**/
@@ -135,8 +135,8 @@
     @apply w-full
       /* ? */
       ;
-    @apply border-collapse
-      /* ? */
+    @apply border-2
+      border-collapse
       ;
   }
   .cgh-table tr:not(:first-child) > :first-child {
@@ -152,7 +152,7 @@
       lg:w-[16rem]
       w-[12rem]
       ;
-    @apply border
+    @apply border-2
     border-slate-300
     bg-slate-100
       ;
@@ -162,7 +162,7 @@
       ;
   }
   .cgh-th:first-child {
-    @apply border;
+    @apply border-2;
   }
   .cgh-th:not(:first-child) {
     @apply border-x-0;
@@ -179,7 +179,7 @@
       ;
   }
   .cgh-tr:first-child {
-    @apply border;
+    @apply border-2;
   }
   .cgh-tr:not(:first-child) {
     @apply border-y-0;
@@ -189,7 +189,7 @@
     @apply text-center
       align-middle
       ;
-    @apply border
+    @apply border-2
     border-slate-200
       px-4 py-3
       ;
@@ -213,7 +213,7 @@
       ;
   }
   .cgh-td:first-child {
-    @apply border;
+    @apply border-2;
   }
   .cgh-td:not(:first-child) {
     @apply border-0;
@@ -225,7 +225,7 @@
     || --- ~~!~~ --- ||
   */
   .cgh-for-display {
-    @apply border
+    @apply border-2 rounded
       space-y-4
       ;
     @apply overflow-x-auto
@@ -235,6 +235,7 @@
       /*
         my-3
       */
+      border-zinc-300/50
       ;
   }
   /*
@@ -338,7 +339,7 @@
       cursor-pointer
       transition-opacity
       ;
-    @apply text-xl
+    @apply text-4xl
       opacity-70
       text-white
       ;
@@ -346,14 +347,20 @@
       top-3
       right-3
       ;
-  }
-  .cgh-card-close:hover {
-    @apply opacity-100
-    ;
-  }
-  .cgh-card-close:active {
-    @apply opacity-100
-    ;
+    /**/
+    @apply transform
+      transition-transform duration-350
+      ;
+    @apply 
+      hover:opacity-100
+      hover:rotate-45
+      hover:scale-[1.2]
+      ;
+    @apply 
+      active:opacity-75
+      active:animate-spin
+      active:scale-[0.9]
+      ;
   }
   /***/
   .cgh-card-name {
@@ -369,8 +376,8 @@
     @apply rounded-lg
       mx-auto text-white
       ;
-    @apply
-      my-3
+    @apply my-auto
+      /* mt-3 mb-4 */
       ;
     @apply
       w-40
@@ -386,12 +393,27 @@
       mt-2 mb-3
       ;
   }
-  /***/
-  .cgh-tocard {
-    /**/
+  /**/
+
+  /*
+    || --- ~~!~~ --- ||
+    CGH Basic Img Talent
+    || --- ~~!~~ --- ||
+  */
+  .cgh-def-bg-tabtog {
+    background-color: var(--cgh-stain-b);
   }
-  .cgh-tolink {
-    /**/
+  .cgh-def-border-tabtog {
+    border-color: var(--cgh-stain-a);
+  }
+  /**/
+  .cgh-def-text-textog {
+    color: var(--cgh-stain-a);
+  }
+  /* *
+  * */
+  .cgh-card-bg-imgtog {
+    background-color: var(--cgh-stain-b);
   }
   /**/
 
@@ -405,69 +427,45 @@
     Talent Color Code
     || --- ~~!~~ --- ||
   */
-  .cgh-stain-sky-1-a {
-    @apply text-purple-400;
+  .cgh-stain-sky-1 {
+    --cgh-stain-a: var(--cgh-sky-1-a);
+    --cgh-stain-b: var(--cgh-sky-1-b);
   }
-  .cgh-stain-sky-1-b {
-    @apply bg-violet-400;
+  .cgh-stain-sea-1 {
+    --cgh-stain-a: var(--cgh-sea-1-a);
+    --cgh-stain-b: var(--cgh-sea-1-b);
   }
-  /**/
-  .cgh-stain-sea-1-a {
-    @apply text-lime-500;
-  }
-  .cgh-stain-sea-1-b {
-    @apply bg-green-500;
-  }
-  /**/
-  .cgh-stain-land-1-a {
-    @apply text-pink-400;
-  }
-  .cgh-stain-land-1-b {
-    @apply bg-rose-400;
-  }
-  /* *
-  * */
-  .cgh-stain-sky-2-a {
-    @apply text-indigo-700;
-  }
-  .cgh-stain-sky-2-b {
-    @apply bg-blue-700;
+  .cgh-stain-land-1 {
+    --cgh-stain-a: var(--cgh-land-1-a);
+    --cgh-stain-b: var(--cgh-land-1-b);
   }
   /**/
-  .cgh-stain-sea-2-a {
-    @apply text-rose-700;
+  .cgh-stain-sky-2 {
+    --cgh-stain-a: var(--cgh-sky-2-a);
+    --cgh-stain-b: var(--cgh-sky-2-b);
   }
-  .cgh-stain-sea-2-b {
-    @apply bg-pink-700;
+  .cgh-stain-sea-2 {
+    --cgh-stain-a: var(--cgh-sea-2-a);
+    --cgh-stain-b: var(--cgh-sea-2-b);
   }
-  /**/
-  .cgh-stain-land-2-a {
-    @apply text-yellow-400;
-  }
-  .cgh-stain-land-2-b {
-    @apply bg-amber-400;
-  }
-  /* *
-  * */
-  .cgh-stain-sky-3-a {
-    @apply text-gray-400;
-  }
-  .cgh-stain-sky-3-b {
-    @apply bg-slate-400;
+  .cgh-stain-land-2 {
+    --cgh-stain-a: var(--cgh-land-2-a);
+    --cgh-stain-b: var(--cgh-land-2-b);
   }
   /**/
-  .cgh-stain-sea-3-a {
-    @apply text-indigo-900;
-  }
-  .cgh-stain-sea-3-b {
-    @apply bg-purple-900;
+  .cgh-stain-sky-3 {
+    --cgh-stain-a: var(--cgh-sky-3-a);
+    --cgh-stain-b: var(--cgh-sky-3-b);
   }
   /**/
-  .cgh-stain-land-3-a {
-    @apply text-red-500;
+  .cgh-stain-sea-3 {
+    --cgh-stain-a: var(--cgh-sea-3-a);
+    --cgh-stain-b: var(--cgh-sea-3-b);
   }
-  .cgh-stain-land-3-b {
-    @apply bg-rose-500;
+  /**/
+  .cgh-stain-land-3 {
+    --cgh-stain-a: var(--cgh-land-3-a);
+    --cgh-stain-b: var(--cgh-land-3-b);
   }
   /**/
 

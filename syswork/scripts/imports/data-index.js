@@ -9,31 +9,31 @@
 /* Data - Pages List */
 export const index_Data_Pl = [
     [
-        ("Comparasion of Gosei Tribes and Hololive ID"),
+        (`Comparasion of Gosei Tribes and Hololive ID`),
         ("cgh"),
     ],[
-        ("Moekyu Gadget Devices (In-Progress : Fliphone)"),
-        ("mpp"),
+        (`Hololive English and Heisei Rider`),
+        ("ehr"),
     ],[
-        ("Projek 3 : Later"),
+        (`Projek 3 : Later`),
         ("tiga"),
     ],[
-        ("Projek 4 : Later"),
+        (`Projek 4 : Later`),
         ("empat"),
     ],[
-        ("Projek 5 : Later"),
+        (`Projek 5 : Later`),
         ("lima"),
     ],[
-        ("Projek 6 : Later"),
+        (`Projek 6 : Later`),
         //("enam"),
     ],[
-        ("Projek 7 : Later"),
+        (`Projek 7 : Later`),
         //("tujuh"),
     ],[
-        ("Projek 8 : Later"),
+        (`Projek 8 : Later`),
         //("delapan"),
     ],[
-        ("Projek 9 : Later"),
+        (`Projek 9 : Later`),
         //("delapan"),
     ],
 ];

@@ -1,7 +1,7 @@
 /*
  *
- * Name: "page-mpp.js"
- * Link: "syswork/scripts/index/page-mpp.js"
+ * Name: "page-ehr.js"
+ * Link: "syswork/scripts/index/page-ehr.js"
  *
  */
 //* * *//

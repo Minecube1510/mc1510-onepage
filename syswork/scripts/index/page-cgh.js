@@ -202,8 +202,12 @@ Object.entries((cgh_BasisData).cgh_AssetsPath)
         //
         const div_Classer = ((jsFuncs).textSentancer([
           (`inline-flex`), (`items-center`), (`justify-center`),
-          (`cgh-stain-${data_Talent.Color}-b`), (`mb-2`), (`p-2`),
           (`rounded-lg`), (`overflow-hidden`),
+          //
+          (`cgh-stain-${data_Talent.Color}`),
+          (`cgh-def-bg-tabtog`),
+          //
+          (`mb-2`), (`p-2`),
         ]));
         const btn_Classer = ((jsFuncs).textSentancer([
           (`cgh-tabtog`), (`cgh-show-card`), (`p-0`),
@@ -214,7 +218,8 @@ Object.entries((cgh_BasisData).cgh_AssetsPath)
         //
         const h3_Classer = ((jsFuncs).textSentancer([
           (`cgh-h3`), (`cgh-textog`),
-          (`cgh-stain-${data_Talent.Color}-a`),
+          (`cgh-stain-${data_Talent.Color}`),
+          (`cgh-def-text-textog`),
         ]));
         //
         (tdGen).innerHTML = ([
@@ -301,10 +306,12 @@ function setOpen_CardStain(
   const staining_A = (`var(--cgh-${stainId}-a)`);
   const staining_B = (`var(--cgh-${stainId}-b)`);
   //
-  el.style.setProperty(("--card-bg"), (staining_B));
-  el.style.setProperty(("--card-border"), (staining_A));
+  el.style.setProperty(("--card-bg"), (staining_A));
+  el.style.setProperty(("--card-border"), (staining_B));
 }
-function setClose_CardStain(overlay, card) {
+function setClose_CardStain(
+  overlay, card
+) {
   overlay.classList.remove("active");
   // RESET STAIN
   setOpen_CardStain(card, null);
@@ -334,20 +341,18 @@ function setClose_CardStain(overlay, card) {
   const cgh_Key_Name = cgh_BtnOpenCard.dataset.name;
   const cgh_Key_Rank = cgh_BtnOpenCard.dataset.rank;
   //
-  //console.log("");
+  //console.log(cgh_VarBlank);
   //console.log(cgh_CardData.id_TalentIndex);
-    //
-  //console.log("");
+  //
+  //console.log(cgh_VarBlank);
   //console.log("[GET] id:", cgh_Key_aIdi);
   //console.log("[GET] name:", cgh_Key_Name);
   //console.log("[GET] rank:", cgh_Key_Rank);
   //
-  const [ctgKey, indexStr] = ((cgh_Key_aIdi)
-    .split(cgh_VarMinus));
-  const get_RoleName = ((cgh_CardData).id_TalentIndex[ctgKey]);
-  const get_DataKey = (`${get_RoleName}_${indexStr}`);
-  const cghGet_Data = (((cgh_CardData)
-    .cgh_DataCarding[get_DataKey]) ?? {});
+  const [ctgKey, indexStr] = cgh_Key_aIdi.split(cgh_VarMinus);
+  const get_RoleName = cgh_CardData.id_TalentIndex[ctgKey];
+  const get_DataKey = `${get_RoleName}_${indexStr}`;
+  const cghGet_Data = cgh_CardData.cgh_DataCarding[get_DataKey] ?? {};
   //
   const {
     Name: name_talent,
@@ -355,50 +360,80 @@ function setClose_CardStain(overlay, card) {
     Pict: pict_talent,
     //
     Code: code_talent,
-    //X: ,
-  } = (cghGet_Data) ?? {};
+    Link: link_talent,
+    //
+    Text_Alter: text_alter,
+    Text_Quote: text_quote,
+    Text_Title: text_title,
+    //
+    //X: x,
+  } = cghGet_Data ?? {};
   //
-  //console.log("");
+  //console.log(cgh_VarBlank);
   //console.log("[CHECK] Name:", name_talent);
   //console.log("[CHECK] Desc:", desc_talent);
   //console.log("[CHECK] Pict:", pict_talent);
   //
-  const safety_CghName = typeof
-    name_talent === "string" && name_talent.trim() !== cgh_VarBlank
-    ? name_talent :
-    `Err: Unknown Talent Name`;
-  const safety_CghDesc = typeof
-    desc_talent === "string" && desc_talent.trim() !== cgh_VarBlank
-    ? desc_talent : jsFuncs.textSentancer([
-      `Err:\n`,
-      `Missing to showed, at the Description...`,
-    ]);
+  const safety_CghName =
+    typeof name_talent === "string" && name_talent.trim() !== cgh_VarBlank
+      ? name_talent
+      : `Err: Unknown Talent Name`;
+  const safety_CghDesc =
+    typeof desc_talent === "string" && desc_talent.trim() !== cgh_VarBlank
+      ? desc_talent
+      : ((jsFuncs).textSentancer([
+          `Err:\n`,
+          `Missing to showed, at the Description...`,
+        ]));
   //
-  const safety_CghPict = (encodeURI(
-    img_AuTemping(pict_talent, cardImg_Basis)));
+  const safety_CghPict = (img_AuTemping(pict_talent, cardImg_Basis));
+  //
+  const closing_CardClass = ((jsFuncs).sentanClasser([
+    (`bi bi-x`),
+    //(`text-2xl`),
+  ]));
+  const boxSafe_ImgClass = ((jsFuncs).sentanClasser([
+    (`inline-flex`), (`items-center`), (`justify-center`),
+    (`rounded-lg`), (`overflow-hidden`),
+    //
+    (`cgh-stain-${code_talent}`),
+    (`cgh-card-bg-imgtog`),
+    //
+    (`mt-3`), (`p-2`),
+  ]));
   //console.log(safety_CghPict);
   //
   setOpen_CardStain(cgh_CardContent, code_talent);
   cgh_CardContent.innerHTML = [
-    //
-    cghDraw_Elm_Categ("img", [
-      // Pict (Ini masalah-nya)
-      `draggable:false`,
-      `class:cgh-card-pict`,
-      `src:${safety_CghPict}`,
-    ], ""),
-    //
     cghDraw_Elm_Categ("button", [`type:button`,
       `class:cgh-card-close`,
-      `aria-label:Close card`
-    ], `✕`),
+      `aria-label:Close card`,
+    ], cghDraw_Elm_Categ("span", [
+      `id:`, `name:`,
+      `class:${closing_CardClass}`,
+    ], (cgh_VarBlank))),
+    //
+    cghDraw_Elm_Categ("div", [
+      (`class:${boxSafe_ImgClass}`),
+    ], cghDraw_Elm_Categ("a", [  // Pict
+      (`id:`), (`name:`),
+      (`href:${link_talent}`),
+      (`class:cgh-tabtog`),
+    ], cghDraw_Elm_Categ("img", [`draggable:false`,
+      `class:cgh-card-pict`, `alt:${text_alter}`,
+      `title:${text_title}`, `src:${safety_CghPict}`,
+    ], (cgh_VarBlank)))),
+    //
     cghDraw_Elm_Categ("h1", [  // Name
-      `class:cgh-card-name`,
-    ], `${safety_CghName}`),
+      `class:cgh-card-name`, `title:${text_quote}`,
+    ], (safety_CghName)),
     cghDraw_Elm_Categ("p", [  // Desc
       `class:cgh-card-desc`,
-    ], `${safety_CghDesc}`),
+    ], (safety_CghDesc)),
   ].join(cgh_VarBlank);
+  //
+  //const cgh_CPB = jsFuncs.jsGetId(`cgh-card-pict-box`);
+  //
   cgh_CardOverlay.classList.add("active");
   //
   if (e.target.closest(".cgh-card-close")) {
